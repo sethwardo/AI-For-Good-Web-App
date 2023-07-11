@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8"><script type="cee8df0dd8516995edb062e3-text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"bb9b7847a8",applicationID:"290946388"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css88210edae050937006ce78c5924e7342b284fc33cd984823af9c7f39d62d1.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css0bc4392b1684b39c8a699d94c3aab2b0a218c96d164f0d1f3825dda7be9f2.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssb804a99178f380c4b2da87170fd8f9449f5f9d590a77fc797cfbf1560b536.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssfcb941e70cb258d37592e15f8e929a0c6ed9a97c4e1742634c8a2a786fcaf.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css9b73ca6c4096eec8ec26a34c4e0f653e0766a989c4cffe0af003e818e3836.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css7dd791796df19893629b18b657973eea6d251e7a8d3b674c51236feb62a01.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssfe2caf22cbfa0b2a23d4b9a24ffee8a937d580cab5abe3fe7de8b72de0452.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css7ea931ed3573026e31c5fb52ef94cb7c6e2a55c719ccde992624c286356e6.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css59043168ebfe31ddbbcc645c787ef86342c59e2cb710d8cf5f7b6a06571c5.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css08f9366af1c5cdccbc60cb546463cb29663100171850cfe85d9682b51b5ec.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssa5608f92f53df23e60c6b1f6b2b1fa9f664a9f8d985c4b58c0efd3ec4cb3c.css" as="style" media="all" /><script data-cfasync="false">function fvmuag(){var e=navigator.userAgent;if(e.match(/x11.*ox\/54|id\s4.*us.*ome\/62|oobo|ight|tmet|eadl|ngdo|PTST/i))return!1;if(e.match(/x11.*me\/86\.0/i)){var r=screen.width;if("number"==typeof r&&1367==r)return!1}return!0}</script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" /><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Non Profit News | Nonprofit Quarterly - Journalism for Non-profit Organizations and Leaders"><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /><meta property="og:description" content="Whether run by humans or machines, when systems aren’t paired with transparency and oversight, they don’t function as tools of democracy."><meta property="og:title" content="New York City’s Algorithm Task Force Report Evades Core Democratic Issues"><meta property="article_author" content="Erin Rubin"><meta property="article_publisher" content="https://www.facebook.com/TheNonprofitQuarterly/"><meta property="og:image" content="https://nonprofitquarterly.org/wp-content/uploads/2019/12/algorithmic-thinking.jpg"><meta property="fb:app_id" content="529576650555031"><meta property="og:type" content="article"><meta property="og:url" content="https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/"><meta property="og:site_name" content="Non Profit News | Nonprofit Quarterly"><meta property="article:published_time" content="2019-12-17T10:11:25-05:00"><meta property="article:modified_time" content="2019-12-20T09:55:49-05:00"><meta property="og:updated_time" content="2019-12-20T09:55:49-05:00"><meta name="twitter:title" content="New York City’s Algorithm Task Force Report Evades Core Democratic Issues"><meta name="twitter:description" content="Whether run by humans or machines, when systems aren’t paired with transparency and oversight, they don’t function as tools of democracy."><meta name="twitter:image" content="https://nonprofitquarterly.org/wp-content/uploads/2019/12/algorithmic-thinking.jpg"><meta name="twitter:site" content="@npquarterly"><meta name="twitter:creator" content="@npquarterly"><meta name="twitter:card" content="summary_large_image"><title>New York City’s Algorithm Task Force Report Evades Core Democratic Issues - Non Profit News | Nonprofit Quarterly</title><meta name="description" content="Whether run by humans or machines, when systems aren’t paired with transparency and oversight, they don’t function as tools of democracy." /><link rel="canonical" href="https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="New York City’s Algorithm Task Force Report Evades Core Democratic Issues - Non Profit News | Nonprofit Quarterly" /><meta property="og:description" content="Whether run by humans or machines, when systems aren’t paired with transparency and oversight, they don’t function as tools of democracy." /><meta property="og:url" content="https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/" /><meta property="og:site_name" content="Non Profit News | Nonprofit Quarterly" /><meta property="article:publisher" content="https://www.facebook.com/TheNonprofitQuarterly/" /><meta property="article:published_time" content="2019-12-17T15:11:25+00:00" /><meta property="article:modified_time" content="2019-12-20T14:55:49+00:00" /><meta property="og:image" content="https://nonprofitquarterly.org/wp-content/uploads/2019/12/algorithmic-thinking.jpg" /><meta property="og:image:width" content="1000" /><meta property="og:image:height" content="563" /><meta property="og:image:type" content="image/jpeg" /><meta name="twitter:card" content="summary" /><meta name="twitter:creator" content="@npquarterly" /><meta name="twitter:site" content="@npquarterly" /><meta name="twitter:label1" content="Written by" /><meta name="twitter:data1" content="Erin Rubin" /><meta name="twitter:label2" content="Est. reading time" /><meta name="twitter:data2" content="5 minutes" /><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://nonprofitquarterly.org/#website","url":"https://nonprofitquarterly.org/","name":"Non Profit News | Nonprofit Quarterly","description":"Journalism for Non-profit Organizations and Leaders","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://nonprofitquarterly.org/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/#primaryimage","inLanguage":"en-US","url":"https://nonprofitquarterly.org/wp-content/uploads/2019/12/algorithmic-thinking.jpg","contentUrl":"https://nonprofitquarterly.org/wp-content/uploads/2019/12/algorithmic-thinking.jpg","width":1000,"height":563},{"@type":"WebPage","@id":"https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/#webpage","url":"https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/","name":"New York City\u2019s Algorithm Task Force Report Evades Core Democratic Issues - Non Profit News | Nonprofit Quarterly","isPartOf":{"@id":"https://nonprofitquarterly.org/#website"},"primaryImageOfPage":{"@id":"https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/#primaryimage"},"datePublished":"2019-12-17T15:11:25+00:00","dateModified":"2019-12-20T14:55:49+00:00","author":{"@id":"https://nonprofitquarterly.org/#/schema/person/e0fa2ed7388e2c2a096aa7880528bf3e"},"description":"Whether run by humans or machines, when systems aren\u2019t paired with transparency and oversight, they don\u2019t function as tools of democracy.","breadcrumb":{"@id":"https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/"]}]},{"@type":"BreadcrumbList","@id":"https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nonprofitquarterly.org/"},{"@type":"ListItem","position":2,"name":"New York City\u2019s Algorithm Task Force Report Evades Core Democratic Issues"}]},{"@type":"Person","@id":"https://nonprofitquarterly.org/#/schema/person/e0fa2ed7388e2c2a096aa7880528bf3e","name":"Erin Rubin","image":{"@type":"ImageObject","@id":"https://nonprofitquarterly.org/#personlogo","inLanguage":"en-US","url":"https://nonprofitquarterly.org/wp-content/uploads/2019/03/Erin-Rubin-1st-choice.jpg","contentUrl":"https://nonprofitquarterly.org/wp-content/uploads/2019/03/Erin-Rubin-1st-choice.jpg","caption":"Erin Rubin"},"description":"Erin Rubin was an assistant editor at the Nonprofit Quarterly, where she was in charge of online editorial coordination and community building. Before joining NPQ, in 2016, Erin worked as an administrator at Harvard Business School and as an editorial project manager at Pearson Education, where she helped develop a digital resource library for remedial learners. Erin has also worked with David R. Godine, Publishers, and the Association of Literary Scholars, Critics, and Writers. As a creative lead with the TEDxBeaconStreet organizing team, she worked to help innovators and changemakers share their groundbreaking ideas and turn them into action.","url":"https://nonprofitquarterly.org/author/erin-rubin/"}]}</script><link rel="alternate" type="application/rss+xml" title="Non Profit News | Nonprofit Quarterly &raquo; Feed" href="https://nonprofitquarterly.org/feed/" /><link rel="alternate" type="application/rss+xml" title="Non Profit News | Nonprofit Quarterly &raquo; Comments Feed" href="https://nonprofitquarterly.org/comments/feed/" /><link rel="alternate" type="application/rss+xml" title="Non Profit News | Nonprofit Quarterly &raquo; New York City’s Algorithm Task Force Report Evades Core Democratic Issues Comments Feed" href="https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/feed/" />
+<script type="cee8df0dd8516995edb062e3-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KX7GKF');</script>
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="shortcut icon" href="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/favicon.ico">
+<script type="cee8df0dd8516995edb062e3-text/javascript">
+      var ajaxurl = 'https://nonprofitquarterly.org/wp-admin/admin-ajax.php';
+	</script>
+<style media="all">@font-face{font-family:"sw-icon-font";src:url(https://nonprofitquarterly.org/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.woff?ver=4.3.0) format("woff");font-weight:400;font-style:normal;font-display:block}</style>
+<script src="//www.googletagmanager.com/gtag/js?id=UA-4988227-2" type="text/javascript" data-cfasync="false" data-wpfc-render="false" async></script>
+<script type="text/javascript" data-cfasync="false" data-wpfc-render="false">
+				var mi_version = '8.3.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+															'ga-disable-UA-4988227-2',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						if ( document.cookie.indexOf( disableStrs[ index ] + '=true' ) > -1 ) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						document.cookie = disableStrs[ index ] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if ( mi_track_user ) {
+					function __gtagDataLayer() {
+						dataLayer.push( arguments );
+					}
+
+					function __gtagTracker( type, name, parameters ) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply( null, arguments );
+							return;
+						}
+
+						if ( type === 'event' ) {
+							
+															parameters.send_to = monsterinsights_frontend.ua;
+								__gtagDataLayer( type, name, parameters );
+													} else {
+							__gtagDataLayer.apply( null, arguments );
+						}
+					}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+											} );
+															__gtagTracker( 'config', 'UA-4988227-2', {"forceSSL":"true","dimension1":"post"} );
+										window.gtag = __gtagTracker;											(function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( 'pageview' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[2] ) {
+												hitObject = {
+													'eventAction': 'page_view',
+													'page_path' : arguments[2],
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof arguments[1].hitType ) {
+											hitObject = arguments[1];
+											if ( 'pageview' === hitObject.hitType ) {
+												hitObject.eventAction = 'page_view';
+											}
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var arg, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+										'page' : 'page_path',
+										'location' : 'page_location',
+										'title' : 'page_title',
+									};
+									for ( arg in args ) {
+																				if ( ! ( ! args.hasOwnProperty(arg) || ! gaMap.hasOwnProperty(arg) ) ) {
+											hit[gaMap[arg]] = args[arg];
+										} else {
+											hit[arg] = args[arg];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						})();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+<link rel='stylesheet' id='social-warfare-block-css-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css88210edae050937006ce78c5924e7342b284fc33cd984823af9c7f39d62d1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css0bc4392b1684b39c8a699d94c3aab2b0a218c96d164f0d1f3825dda7be9f2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='social_warfare-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssb804a99178f380c4b2da87170fd8f9449f5f9d590a77fc797cfbf1560b536.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssfcb941e70cb258d37592e15f8e929a0c6ed9a97c4e1742634c8a2a786fcaf.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css9b73ca6c4096eec8ec26a34c4e0f653e0766a989c4cffe0af003e818e3836.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-modal-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css7dd791796df19893629b18b657973eea6d251e7a8d3b674c51236feb62a01.css' type='text/css' media='all' />
+<link rel='stylesheet' id='audio7-html5-css-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssfe2caf22cbfa0b2a23d4b9a24ffee8a937d580cab5abe3fe7de8b72de0452.css' type='text/css' media='all' />
+<link rel='stylesheet' id='selectBox-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css7ea931ed3573026e31c5fb52ef94cb7c6e2a55c719ccde992624c286356e6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='chosen-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css59043168ebfe31ddbbcc645c787ef86342c59e2cb710d8cf5f7b6a06571c5.css' type='text/css' media='all' />
+<link rel='stylesheet' id='understrap-styles-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css08f9366af1c5cdccbc60cb546463cb29663100171850cfe85d9682b51b5ec.css' type='text/css' media='all' />
+<link rel='stylesheet' id='moove_gdpr_frontend-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssa5608f92f53df23e60c6b1f6b2b1fa9f664a9f8d985c4b58c0efd3ec4cb3c.css' type='text/css' media='all' />
+<style id='moove_gdpr_frontend-inline-css' type='text/css' media="all">#moove_gdpr_cookie_modal,#moove_gdpr_cookie_info_bar,.gdpr_cookie_settings_shortcode_content{font-family:Nunito,sans-serif}#moove_gdpr_save_popup_settings_button{background-color:#373737;color:#fff}#moove_gdpr_save_popup_settings_button:hover{background-color:#000}#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton,#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton{background-color:#0C4DA2}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green{background-color:#0C4DA2;border-color:#0C4DA2}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton:hover,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green:hover{background-color:#fff;color:#0C4DA2}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon{background-color:#0C4DA2;border:1px solid #0C4DA2}#moove_gdpr_cookie_info_bar span.change-settings-button.focus-g{-webkit-box-shadow:0 0 1px 3px #0C4DA2;-moz-box-shadow:0 0 1px 3px #0C4DA2;box-shadow:0 0 1px 3px #0C4DA2}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button{color:#0C4DA2}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .gdpr-acc-link{line-height:0;font-size:0;color:transparent;position:absolute}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close:hover i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button.focus-g{color:#0C4DA2}#moove_gdpr_cookie_modal.gdpr_lightbox-hide{display:none}</style>
+<style id="wpp-loading-animation-styles" media="all">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+<link rel="icon" href="https://nonprofitquarterly.org/wp-content/uploads/2021/11/cropped-NPQ-new_Logo_512-3-192x192.jpg" sizes="192x192" />
+<style type="text/css" id="wp-custom-css" media="all">body.page-template-default main article p a.no-icon:after{display:none!important}</style>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js' type="cee8df0dd8516995edb062e3-text/javascript"></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+<script type="cee8df0dd8516995edb062e3-text/javascript"> var _d_site = _d_site || '6792B0D2E9F28D51061FA31B'; </script>
+<script src='//widget.privy.com/assets/widget.js' async='async' type="cee8df0dd8516995edb062e3-text/javascript"></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript">
+        googletag.cmd.push(function() {
+
+            var mapping_leader = googletag.sizeMapping().addSize([0, 0], [[300, 50], [320, 50]]).addSize([728, 200], [728, 90]).build();
+            var mapping_inline = googletag.sizeMapping().addSize([0, 0], [[300, 50], [320, 50]]).addSize([728, 200], [468, 60]).build();
+
+            googletag.defineSlot('/5047800/Homepage_MediumRectangle_Sidebar_3_300x250', [300, 250], 'div-gpt-ad-1501526414099-4').addService(googletag.pubads());
+
+googletag.defineSlot('/5047800/Article_FullBanner_Inline_468x60', [[468, 60], [300, 50]], 'div-gpt-ad-1568391674167-0').addService(googletag.pubads());
+
+googletag.defineSlot('/5047800/Homepage_MediumRectangle_Sidebar_6_300x250', [300, 250], 'div-gpt-ad-1569874932810-0').addService(googletag.pubads());
+
+googletag.defineSlot('/5047800/Homepage_FullBanner3_Inline_468x60', [[300, 50], [468, 60]], 'div-gpt-ad-1569874959269-0').addService(googletag.pubads());
+
+googletag.defineSlot('/5047800/Homepage_MediumRectangle_Sidebar_7_300x250', [300, 250], 'div-gpt-ad-1569875248555-0').addService(googletag.pubads());
+			            googletag.defineSlot('/5047800/Homepage_FullBanner_Inline_468x60', [[300, 50], [468, 60]], 'div-gpt-ad-1501526414099-0').defineSizeMapping(mapping_inline).addService(googletag.pubads());            googletag.pubads().collapseEmptyDivs();
+            googletag.pubads().setTargeting('url', ['postid-3529269']);
+            googletag.enableServices();
+        });
+    </script>
+</head>
+<body class="post-template-default single single-post postid-3529269 single-format-standard group-blog">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX7GKF"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="site main-outercon" id="page">
+<header class="header-container">
+<div class="container">
+<div class="header">
+<div class="row">
+<div class="col-12 header-top">
+<div class="logo">
+<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon">
+<div class="ham-icon">
+<div class="menui top-bar"></div>
+<div class="menui mid-bar"></div>
+<div class="menui bottom-bar"></div>
+</div>
+<span>SECTIONS</span>
+</span>
+</button>
+<a href="https://nonprofitquarterly.org/" data-wpel-link="internal">
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/logo.png" alt="logo" /></a>
+</div>
+<div class="social-icons">
+<a href="https://npqmag.xsubscribe.com/subscribe/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer"><span style="display: flex; justify-content: space-between; align-items: center; color: black;"><img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/svg/book.svg" style="margin-right: 4px;" alt="book" /> Subscribe to our Magazine</span></a>
+<ul class="list-unstyled">
+<li><a target="_blank" href="https://www.facebook.com/TheNonprofitQuarterly/" data-wpel-link="external" rel="external noopener noreferrer"><i class="fa fa-facebook" aria-hidden="true" style="padding: 5px 9px;"></i></a></li>
+<li><a target="_blank" href="https://twitter.com/npquarterly" data-wpel-link="external" rel="external noopener noreferrer"><i class="fa fa-twitter" aria-hidden="true" style="padding: 5px 6px;"></i></a></li>
+<li><a target="_blank" href="https://www.linkedin.com/company/nonprofit-quarterly/" data-wpel-link="external" rel="external noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true" style="padding: 5px 6px;"></i></a></li>
+<li><a target="_blank" href="/cdn-cgi/l/email-protection#6e070008012e001e1f030f0940011c09"><i class="fa fa-envelope" aria-hidden="true" style="padding: 5px 6px;"></i></a></li>
+</ul>
+</div>
+<div class="header-links">
+<ul class="list-unstyled">
+<div class="menu-top-menu-container"><ul id="top_nav" class="menu"><li id="menu-item-3523761" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3523761"><a href="https://npqmag.xsubscribe.com/subscribe/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Magazine</a></li>
+<li id="menu-item-3527029" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3527029"><a target="_blank" rel="noopener external noreferrer" href="https://store.nonprofitquarterly.org/pages/membership-signup" data-wpel-link="external">Membership</a></li>
+<li id="menu-item-3544700" class="button-dark-red menu-item menu-item-type-custom menu-item-object-custom menu-item-3544700"><a href="https://nonprofitquarterly.networkforgood.com/projects/19393-this-is-who-npq-serves" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Donate</a></li>
+</ul></div> </ul>
+</div>
+</div>
+<div class="col-12 header-bottom">
+<div class="main-menu section">
+<div class="container">
+<div id="navbarNavDropdown" class="navbar-collapse"><ul id="main-menu" class="navbar-nav ml-auto"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3542716" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3542716 nav-item"><a title="Racial Justice" href="/category/race-and-power-racial-justice/" class="nav-link" data-wpel-link="internal">Racial Justice</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3542717" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3542717 nav-item"><a title="Economic Justice" href="/category/economic-justice-democracy/" class="nav-link" data-wpel-link="internal">Economic Justice</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3544702" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3544702 nav-item"><a title="Climate Justice" href="/category/climate-justice/" class="nav-link" data-wpel-link="internal">Climate Justice</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3544703" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3544703 nav-item"><a title="Health Justice" href="/category/healthcare-justice/" class="nav-link" data-wpel-link="internal">Health Justice</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3542718" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-3542718 nav-item"><a title="Leadership" href="/category/leadership-management/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-3542718" data-wpel-link="internal">Leadership</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-3542718" role="menu">
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3539147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3539147 nav-item"><a title="Grassroots Fundraising Journal" href="https://nonprofitquarterly.org/grassroots-fundraising-journal/" class="dropdown-item" data-wpel-link="internal">Grassroots Fundraising Journal</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2925796" class="type-list no-link menu-item menu-item-type-custom menu-item-object-custom menu-item-2925796 nav-item"><a title="CONTENT TYPES" href="#" class="nav-link"><span class="module-title">CONTENT TYPES</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3543955" class="type-list color-white separator menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-3543955 nav-item"><a title="Podcasts" href="/category/podcasts/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-3543955" data-wpel-link="internal">Podcasts</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-3543955" role="menu">
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2926239" class="type-list color-white menu-item menu-item-type-post_type menu-item-object-page menu-item-2926239 nav-item"><a title="Tiny Spark" href="https://nonprofitquarterly.org/tiny-spark/" class="dropdown-item" data-wpel-link="internal">Tiny Spark</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3543956" class="type-list color-white menu-item menu-item-type-post_type menu-item-object-page menu-item-3543956 nav-item"><a title="Women of Color in Power" href="https://nonprofitquarterly.org/wocip/" class="dropdown-item" data-wpel-link="internal">Women of Color in Power</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2926234" class="type-list color-white menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-2926234 nav-item"><a title="Webinars" href="https://nonprofitquarterly.org/webinars/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-2926234" data-wpel-link="internal">Webinars</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-2926234" role="menu">
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2927239" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2927239 nav-item"><a title="Free Webinars" href="https://nonprofitquarterly.org/webinars/" class="dropdown-item" data-wpel-link="internal">Free Webinars</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3530803" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3530803 nav-item"><a title="Premium On-Demand Webinars" href="https://store.nonprofitquarterly.org/collections/on-demand" class="dropdown-item" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Premium On-Demand Webinars</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2926227" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2926227 nav-item"><a title="Membership" href="https://store.nonprofitquarterly.org/pages/membership-signup" class="nav-link" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Membership</a></li>
+</ul></div> </div>
+</div>
+<div class="header-search">
+<form method="get" id="searchform" class="search-form" action="https://nonprofitquarterly.org/" role="search">
+<input class="inputfield inputbox" id="s" name="s" type="text" placeholder="Search NPQ" value="">
+<button class="submit-btn" type="submit" id="searchsubmit" name="submit" value="Search">
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="content-container">
+<div class="wrapper" id="single-wrapper">
+<div class="container" id="content" tabindex="-1">
+<div class="post-section">
+<div class="row">
+<div class="col-md-8 title-area">
+<div class="container-pagination">
+</div>
+<div class="post-title">
+<h1>New York City’s Algorithm Task Force Report Evades Core Democratic Issues</h1>
+<div class="user-desc">
+<div class="avatar-wrapper">
+<img src="https://nonprofitquarterly.org/wp-content/uploads/2019/03/Erin-Rubin-1st-choice-150x150.jpg" alt="" width="51" height="51" class="avatar avatar-51 photo" /> </div>
+<div class="user-data">
+<h5><a href="https://nonprofitquarterly.org/author/erin-rubin/" title="Posts by Erin Rubin" class="author url fn" rel="author" data-wpel-link="internal">Erin Rubin</a> </h5>
+<span>December 17, 2019</span>
+</div>
+</div>
+<div class="share-this csl-social-share">
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8 content-area" id="primary">
+<main class="site-main" id="main" style="margin-bottom: 25px;">
+<div class="post-content">
+<div class="post-content-inner">
+<article class="post-3529269 post type-post status-publish format-standard has-post-thumbnail hentry tag-nonprofit-news tag-nonprofit-policy cluster_mapping-policy-trends" id="post-3529269">
+<div class="entry-content">
+<div class="swp_social_panel swp_horizontal_panel swp_flat_fresh  swp_default_full_color swp_other_full_color swp_individual_full_color scale-100 scale-full_width" data-min-width="1100" data-float-color="#ffffff" data-float="none" data-float-mobile="none" data-transition="slide" data-post-id="3529269"><div class="nc_tweetContainer swp_share_button swp_facebook" data-network="facebook"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_facebook_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_twitter" data-network="twitter"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://twitter.com/intent/tweet?text=New+York+City%E2%80%99s+Algorithm+Task+Force+Report+Evades+Core+Democratic+Issues&amp;url=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F&amp;via=npquarterly" data-link="https://twitter.com/intent/tweet?text=New+York+City%E2%80%99s+Algorithm+Task+Force+Report+Evades+Core+Democratic+Issues&amp;url=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F&amp;via=npquarterly" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_twitter_icon"></i><span class="swp_share">Tweet</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_linkedin" data-network="linkedin"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_linkedin_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_email" data-network="email"><a class="nc_tweet noPop swp_share_link" rel="nofollow noreferrer noopener" href="/cdn-cgi/l/email-protection#80bff3f5e2eae5e3f4bdcee5f7a5b2b0d9eff2eba5b2b0c3e9f4f9a5c5b2a5b8b0a5b9b9f3a5b2b0c1ece7eff2e9f4e8eda5b2b0d4e1f3eba5b2b0c6eff2e3e5a5b2b0d2e5f0eff2f4a5b2b0c5f6e1e4e5f3a5b2b0c3eff2e5a5b2b0c4e5edefe3f2e1f4e9e3a5b2b0c9f3f3f5e5f3a6e2efe4f9bdd7e8e5f4e8e5f2a5b2b0f2f5eea5b2b0e2f9a5b2b0e8f5ede1eef3a5b2b0eff2a5b2b0ede1e3e8e9eee5f3a5b2c3a5b2b0f7e8e5eea5b2b0f3f9f3f4e5edf3a5b2b0e1f2e5eea5c5b2a5b8b0a5b9b9f4a5b2b0f0e1e9f2e5e4a5b2b0f7e9f4e8a5b2b0f4f2e1eef3f0e1f2e5eee3f9a5b2b0e1eee4a5b2b0eff6e5f2f3e9e7e8f4a5b2c3a5b2b0f4e8e5f9a5b2b0e4efeea5c5b2a5b8b0a5b9b9f4a5b2b0e6f5eee3f4e9efeea5b2b0e1f3a5b2b0f4efefecf3a5b2b0efe6a5b2b0e4e5edefe3f2e1e3f9aea5b0c4a5b0c1a5b0c4a5b0c1d2e5e1e4a0cdeff2e5a0c8e5f2e5baa0a5b2b0e8f4f4f0f3a5b3c1a5b2c6a5b2c6eeefeef0f2efe6e9f4f1f5e1f2f4e5f2ecf9aeeff2e7a5b2c6eee5f7adf9eff2ebade3e9f4f9f3ade1ece7eff2e9f4e8edadf4e1f3ebade6eff2e3e5adf2e5f0eff2f4ade5f6e1e4e5f3ade3eff2e5ade4e5edefe3f2e1f4e9e3ade9f3f3f5e5f3a5b2c6" target="_blank"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_email_icon"></i><span class="swp_share">Email</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_print" data-network="print"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="#" data-link="#"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_print_icon"></i><span class="swp_share">Print</span></span></span></span></a></div></div><figure id="attachment_3529254" aria-describedby="caption-attachment-3529254" style="width: 1000px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-3529254 size-full" src="https://nonprofitquarterly.org/wp-content/uploads/2019/12/algorithmic-thinking.jpg" alt="" width="1000" height="563" srcset="https://nonprofitquarterly.org/wp-content/uploads/2019/12/algorithmic-thinking.jpg 1000w, https://nonprofitquarterly.org/wp-content/uploads/2019/12/algorithmic-thinking-300x169.jpg 300w, https://nonprofitquarterly.org/wp-content/uploads/2019/12/algorithmic-thinking-768x432.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /><figcaption id="caption-attachment-3529254" class="wp-caption-text">“<a href="https://www.flickr.com/photos/gleonhard/23417123054" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">Best of 2015: Themes and Memes by Futurist Speaker Gerd Leonhard</a>.”</figcaption></figure>
+<p>December 12, 2019; <a href="https://www.citylab.com/equity/2019/12/ai-technology-computer-algorithm-cities-automated-systems/603349/" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">CityLab</a></p><div class="ad-block-wider top-margin" style="margin: 15px 0;"><div id='div-gpt-ad-1568391674167-0'> <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="cee8df0dd8516995edb062e3-text/javascript">     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1568391674167-0'); });   </script> </div></div>
+<p>On what principles do we want city governments to operate? What should municipal offices prioritize when designing systems? These are questions governments perhaps ought to ask themselves more often than they do; in the case of New York City’s Automated Decisions Systems Task Force, it could have saved them a lot of headaches.</p>
+<p>The task force went through fits and starts. At least one member left; multiple outside interest groups attempted to help and were ignored. Ultimately, they produced <a href="https://www1.nyc.gov/assets/adstaskforce/downloads/pdf/ADS-Report-11192019.pdf" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">a toothless report</a> that spends the majority of its pages describing background issues rather than offering solutions.</p>
+<p>The background is this: New York, like many municipalities, relies on algorithms and other automated decision systems (ADS) to simplify the work of governing. Algorithms in New York may determine an increasing pool of city functions—whether someone is suitable for parole, for example, or a bodega is eligible to function as a SNAP vendor, or even a school bus route.</p>
+<p>But as <em>NPQ </em>and many others <a href="https://nonprofitquarterly.org/biased-algorithms-vs-real-life-a-food-security-issue/" target="_blank" rel="noopener noreferrer" data-wpel-link="internal">have pointed out</a>, algorithms don’t correct for bias; they encode it. (After all, they learn by studying prior decisions.) Because they’re perceived as purely rational, computer systems aren’t questioned or subject to oversight in the same way a bureaucrat would be, and thus disparities and biases are embedded in decisions in ways that make accountability difficult. While it is possible to adjust the algorithms to at least <a href="https://nonprofitquarterly.org/study-finds-algorithms-used-appropriately-can-reduce-racial-disparities/" target="_blank" rel="noopener noreferrer" data-wpel-link="internal">mitigate these problems</a>, all too often algorithms applied to public policy can become, <a href="https://nonprofitquarterly.org/will-computer-algorithms-support-equity-reinforce-inequality/" target="_blank" rel="noopener noreferrer" data-wpel-link="internal">as one mathematician put it</a>, “weapons of math destruction.”</p>
+<p>New York was supposed to be the pilot project for unearthing and examining the ways in which ADS and resulting government practices affected citizens’ lives. Local law 49 of 2018 established the ADS Task Force, which should have informed policymakers about how and where biases were being systematized, and if and when ADS use was appropriate.</p>
+<p>Instead, they started off on a bad foot when they could not reach consensus about what constituted ADS in the first place. Former task force member Albert Fox Cahn <a href="https://www.fastcompany.com/90436012/the-first-effort-to-regulate-ai-was-a-spectacular-failure" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">wrote that</a> members debated, “What exactly is an automated decision system? Is it any computer-based automation? What about policy-driven automation, when individuals’ discretion is automated by policies and procedures that are memorialized on paper—like the NYPD Patrol Guide?”</p>
+<p>Those are all great questions, and deserving of scrutiny, but city officials wanted the task force’s inquiries confined specifically to artificial intelligence and algorithms—even though, as Cahn points out, “You don’t need a multimillion-dollar natural-language model to make a dangerous system that makes decisions without human oversight, and that has the power to change people’s lives. And automated decision systems do that quite a bit in New York City.”</p><div class="subscribe-section">
+<div class="signup-form-block">
+<h4>Sign up for our free newsletter</h4>
+<p>Subscribe to the <i style="font-style: italic;">NPQ</i> newsletter to have our top stories delivered directly to your inbox.</p>
+<div class="privy-embed-form" data-campaign="2899395"></div>
+<p class="form-subtext">By signing up, you agree to our privacy policy and terms of use, and to receive messages from NPQ and our partners.</p>
+</div>
+</div>
+<p>The task force was established within the mayor’s office, which might have been a red flag from the start—an organization “investigating” itself is bound to tie itself in knots. Several outside advocacy organizations, or coalitions of organizations, attempted to inform and empower the process. A coalition of civil rights advocates, researchers, community organizers, and concerned residents submitted a letter recommending members of the task force, and several of those people were indeed appointed, giving the coalition hope that their expertise would be welcomed.</p>
+<p>According to <a href="https://ainowinstitute.org/ads-shadowreport-2019.pdf" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">a shadow report</a> they later published, lots of effort went into preparing help for the task force: The AI Now institute <a href="https://ainowinstitute.org/aiareport2018.pdf" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">published a practical framework</a> for AI system accountability, with an <a href="https://medium.com/@AINowInstitute/algorithmic-impact-assessments-toward-accountable-automation-in-public-agencies-bd9856e6fdde" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">accompanying article</a> that specifically offered the framework to the NYC task force. Rashida Richardson <a href="https://datasociety.net/wp-content/uploads/2018/01/NYC-Automated-Decision-Systems-Task-Force-Recommendations-Letter-1.22.18.pdf" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">offered a list</a> of issues, areas of expertise, organizations, and transparency considerations to be consulted. The coalition drafted recommendations based on Local Law 49. It appeared the task force did not want their help.</p>
+<p>The nail in the efficacy coffin really came when city departments refused to release information about the systems currently in use. It’s normal for vendor technologies to be kept secret, to protect their products and to keep residents’ information private. But without any information about what systems were being used, how could the task force assess their impact? The task force’s existence was predicated on the assumption that automating current systems and procedures were producing inequitable outcomes. If city systems weren’t willing to prioritize what they could learn from interrogating these systems over business as usual, it was doomed from the start.</p>
+<p>The <a href="https://www1.nyc.gov/assets/adstaskforce/downloads/pdf/ADS-Report-11192019.pdf" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">report</a> is predictably disappointing. Two thirds of the way in, it begins to list recommendations like centralizing an ADS structure within City government or adopting principles of fairness. It begins from the assumption that ADS is a good thing that should be used, and that the city is itself capable of any necessary oversight. That isn’t where a task force examining the impact of ADS should have started.</p>
+<p>The shadow report described the coalition of outside advocates as “a crucial element in leveraging the public’s concerns,” and repeatedly expressed concern about the lack of public engagement. It was endorsed by dozens of organizations and individuals, including <a href="http://d4bl.org/about.html" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">Data for Black Lives</a>, the <a href="https://www.ajlunited.org/" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">Algorithmic Justice League</a>, the <a href="https://www.aclu.org/" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">American Civil Liberties Union</a> (ACLU), the <a href="https://www.immigrantdefenseproject.org/about/" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">Immigrant Defense Project</a>, and faculty from half a dozen universities.</p>
+<p>Algorithms are designed to maximize efficiency, but that isn’t the highest good of a public system. Richardson, editor of the shadow report and director of policy research at the <a href="https://ainowinstitute.org/" target="_blank" rel="noopener noreferrer external" data-wpel-link="external">AI Now Institute</a> at New York University (NYU), said that the city should use its enormous purchasing power as leverage to demand transparency from vendors about the systems the city pays to use. That would be a good start.—Erin Rubin</p>
+<p><em>Correction: This newswire has been altered from its initial form to correct certain errors of fact. The author of the letter to the NYC ADS task force is Rashida Robinson, and the shadow report indicates that community members tried to engage with the task force in other ways.</em></p>
+</p><div class="swp_social_panel swp_horizontal_panel swp_flat_fresh  swp_default_full_color swp_other_full_color swp_individual_full_color scale-100 scale-full_width" data-min-width="1100" data-float-color="#ffffff" data-float="none" data-float-mobile="none" data-transition="slide" data-post-id="3529269"><div class="nc_tweetContainer swp_share_button swp_facebook" data-network="facebook"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_facebook_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_twitter" data-network="twitter"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://twitter.com/intent/tweet?text=New+York+City%E2%80%99s+Algorithm+Task+Force+Report+Evades+Core+Democratic+Issues&amp;url=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F&amp;via=npquarterly" data-link="https://twitter.com/intent/tweet?text=New+York+City%E2%80%99s+Algorithm+Task+Force+Report+Evades+Core+Democratic+Issues&amp;url=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F&amp;via=npquarterly" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_twitter_icon"></i><span class="swp_share">Tweet</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_linkedin" data-network="linkedin"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fnonprofitquarterly.org%2Fnew-york-citys-algorithm-task-force-report-evades-core-democratic-issues%2F" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_linkedin_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_email" data-network="email"><a class="nc_tweet noPop swp_share_link" rel="nofollow noreferrer noopener" href="/cdn-cgi/l/email-protection#af90dcdacdc5caccdb92e1cad88a9d9ff6c0ddc48a9d9fecc6dbd68aea9d8a979f8a9696dc8a9d9feec3c8c0ddc6dbc7c28a9d9ffbcedcc48a9d9fe9c0ddccca8a9d9ffdcadfc0dddb8a9d9fead9cecbcadc8a9d9fecc0ddca8a9d9febcac2c0ccddcedbc6cc8a9d9fe6dcdcdacadc89cdc0cbd692f8c7cadbc7cadd8a9d9fdddac18a9d9fcdd68a9d9fc7dac2cec1dc8a9d9fc0dd8a9d9fc2ceccc7c6c1cadc8a9dec8a9d9fd8c7cac18a9d9fdcd6dcdbcac2dc8a9d9fceddcac18aea9d8a979f8a9696db8a9d9fdfcec6ddcacb8a9d9fd8c6dbc78a9d9fdbddcec1dcdfceddcac1ccd68a9d9fcec1cb8a9d9fc0d9cadddcc6c8c7db8a9dec8a9d9fdbc7cad68a9d9fcbc0c18aea9d8a979f8a9696db8a9d9fc9dac1ccdbc6c0c18a9d9fcedc8a9d9fdbc0c0c3dc8a9d9fc0c98a9d9fcbcac2c0ccddceccd6818a9feb8a9fee8a9feb8a9feefdcacecb8fe2c0ddca8fe7caddca958f8a9d9fc7dbdbdfdc8a9cee8a9de98a9de9c1c0c1dfddc0c9c6dbdedacedddbcaddc3d681c0ddc88a9de9c1cad882d6c0ddc482ccc6dbd6dc82cec3c8c0ddc6dbc7c282dbcedcc482c9c0ddccca82ddcadfc0dddb82cad9cecbcadc82ccc0ddca82cbcac2c0ccddcedbc6cc82c6dcdcdacadc8a9de9" target="_blank"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_email_icon"></i><span class="swp_share">Email</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_print" data-network="print"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="#" data-link="#"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_print_icon"></i><span class="swp_share">Print</span></span></span></span></a></div></div><div class="swp-content-locator"></div>
+</div>
+<footer class="entry-footer">
+
+</footer>
+</article>
+</div>
+</div>
+<div class="author-section">
+<h6 class="module-title" style="color: black;">ABOUT THE AUTHOR</h6>
+<div class="author-data">
+<div class="author-details">
+<div class="avatar-wrapper">
+<img src="https://nonprofitquarterly.org/wp-content/uploads/2019/03/Erin-Rubin-1st-choice.jpg" alt="" width="70" height="70" class="avatar avatar-70 photo" /> </div>
+</div>
+<div class="author-desc">
+<span class="author-name"><a href="https://nonprofitquarterly.org/author/erin-rubin/" title="Posts by Erin Rubin" class="author url fn" rel="author" data-wpel-link="internal">Erin Rubin</a></span>
+<p>Erin Rubin was an assistant editor at the Nonprofit Quarterly, where she was in charge of online editorial coordination and community building. Before joining NPQ, in 2016, Erin worked as an administrator at Harvard Business School and as an editorial project manager at Pearson Education, where she helped develop a digital resource library for remedial learners. Erin has also worked with David R. Godine, Publishers, and the Association of Literary Scholars, Critics, and Writers. As a creative lead with the TEDxBeaconStreet organizing team, she worked to help innovators and changemakers share their groundbreaking ideas and turn them into action.</p>
+</div>
+</div>
+<div class="tags">
+<span>More about: </span>
+<a href="https://nonprofitquarterly.org/tag/nonprofit-news/" data-wpel-link="internal">Nonprofit News</a><a href="https://nonprofitquarterly.org/tag/nonprofit-policy/" data-wpel-link="internal">Policy</a>  </div>
+</div>
+<div>
+<div class="become-a-member-block">
+<h4 class="block-title">Become a member</h4>
+<div class="become-a-member-text">
+<p>Support independent journalism and knowledge creation for civil society. Become a member of Nonprofit Quarterly.</p>
+<p>Members receive unlimited access to our archived and upcoming digital content. NPQ is the leading journal in the nonprofit sector written by social change experts.
+Gain access to our exclusive library of online courses led by thought leaders and educators providing contextualized information to help nonprofit practitioners
+make sense of changing conditions and improve infra-structure in their organizations.</p>
+</div>
+<div class="block-bottom-section">
+<div class="row">
+<div class="col-md-5">
+<a href="https://store.nonprofitquarterly.org/pages/membership-signup?utm_source=nonprofitquarterly.org&amp;utm_medium=referral&amp;utm_campaign=NPQ%20Home%20Page" class="become-a-member-button" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Join Today</a>
+</div>
+<div class="col-md-7">
+<div class="cc-container">
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/visa_icon.png" alt="logo" /></a>
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/mastercard_icon.png" alt="logo" /></a>
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/amex_icon.png" alt="logo" /></a>
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/discover_icon.png" alt="logo" /></a>
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/paypal_icon.png" alt="logo" /></a>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+<div class="comments-area">
+<div class="comment-toggler">
+<div id="comment-toggler" class="comment-toggler-btn">
+<i class="fa fa-comment-o" aria-hidden="true"></i>
+<span>See comments</span>
+</div>
+</div>
+</div>
+<div id="disqus_thread"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="cee8df0dd8516995edb062e3-text/javascript">
+        DISQUS.reset({
+		  reload: true,
+		  config: function () {  
+		    this.page.identifier = "npquarterly-3529269";  
+		    this.page.url = "https://nonprofitquarterly.org/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues/";
+		  }
+		});
+    </script>
+<br><div class="ad-block-wider top-margin" style="margin: 15px 0;"><div id='div-gpt-ad-1569874959269-0'> <script type="cee8df0dd8516995edb062e3-text/javascript">     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1569874959269-0'); });   </script> </div></div> </main>
+</div>
+<div class="col-md-4 widget-area" id="right-sidebar" role="complementary">
+<div class="sidebar-widgets">
+<div> <div class="textwidget"><p></p>
+<div class="">
+<div class="">
+<div class="">
+<div class="">
+<div class="">
+<div class="">
+<div class="">
+<div class="">
+<div class="WordSection1">
+<div class=""></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><a href="https://npqmag.xsubscribe.com/subscribe/ref=sidebar-spring22" data-wpel-link="external" target="_blank" rel="external noopener noreferrer"><img loading="lazy" class="alignnone wp-image-3545928 size-full" src="https://nonprofitquarterly.org/wp-content/uploads/2022/03/Sidebar.jpg" alt="NPQ_Spring_2022" width="784" height="936" srcset="https://nonprofitquarterly.org/wp-content/uploads/2022/03/Sidebar.jpg 784w, https://nonprofitquarterly.org/wp-content/uploads/2022/03/Sidebar-251x300.jpg 251w, https://nonprofitquarterly.org/wp-content/uploads/2022/03/Sidebar-768x917.jpg 768w" sizes="(max-width: 784px) 100vw, 784px" /></a></p>
+</div>
+</div> </div>
+<div class="">
+</div>
+<div class="sidebar-posts posts">
+<h6 class="module-title">You might also like</h6>
+<div class="list-outer">
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/02/marissa-eric-street-unsplash-300x200.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/edgar-cahns-second-act-time-banking-and-the-return-of-mutual-aid/" data-wpel-link="internal">Edgar Cahn’s Second Act: Time Banking and the Return of Mutual Aid</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/sdubb/" title="Posts by Steve Dubb" class="author url fn" rel="author" data-wpel-link="internal">Steve Dubb</a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/02/womanizer-toys-8oB43mw658c-unsplash-300x200.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/we-owe-you-nothing-the-movement-to-cancel-student-debt-gains-ground/" data-wpel-link="internal">We Owe You Nothing: The Movement to Cancel Student Debt Gains Ground</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/rithika-ramamurthy/" title="Posts by Rithika Ramamurthy" class="author url fn" rel="author" data-wpel-link="internal">Rithika Ramamurthy</a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/02/pexels-luis-quintero-2339722-300x200.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/charitable-tax-reform-why-half-measures-wont-curb-plutocracy/" data-wpel-link="internal">Charitable Tax Reform: Why Half Measures Won’t Curb Plutocracy</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/alan-davis/" title="Posts by Alan Davis" class="author url fn" rel="author" data-wpel-link="internal">Alan Davis</a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="grid-item">
+ <div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/02/michael-marais-HjV_hEECgcM-unsplash-1-300x164.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/green-new-deal-or-stale-old-tax-break-scam-getting-electric-vehicle-incentives-right/" data-wpel-link="internal">Green New Deal or Stale Old Tax-Break Scam? Getting Electric Vehicle Incentives Right</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/greg-leroy/" title="Posts by Greg LeRoy" class="author url fn" rel="author" data-wpel-link="internal">Greg LeRoy</a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/01/josh-calabrese-glasses-unsplash-300x200.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/goodbye-race-neutrality-the-case-for-race-conscious-economic-policy/" data-wpel-link="internal">Goodbye “Race Neutrality”—The Case for Race-Conscious Economic Policy</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/dedrick-asante-muhammad/" title="Posts by Dedrick Asante-Muhammad" class="author url fn" rel="author" data-wpel-link="internal">Dedrick Asante-Muhammad</a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/01/ken-theimer-library-unsplash-300x200.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/graduate-student-workers-are-in-the-frontline-of-the-growing-labor-movement/" data-wpel-link="internal">Graduate Student Workers Are in the Frontline of the Growing Labor Movement</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/rithika-ramamurthy/" title="Posts by Rithika Ramamurthy" class="author url fn" rel="author" data-wpel-link="internal">Rithika Ramamurthy</a></div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="sticky-sidebar">
+<div class="sidebar-widget webinars">
+<div> <div class="webinars-widget">
+<h2 class="title"> Upcoming Webinars </h2>
+<div class="content">
+<div class="webinar__card">
+<div class="webinar__card-type">
+<div class="webinar__card-type--block">
+<div class="card-image">
+<a href="https://store.nonprofitquarterly.org/products/mastering-quickbooks-2022-the-how-to-clinic-for-nonprofit-bookkeepers-for-online-quickbooks-users" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
+<img src="https://nonprofitquarterly.org/wp-content/uploads/2022/04/SocialPromoTW-2.png" />
+</a>
+</div>
+</div>
+</div>
+<div class="webinar__card-body">
+<div class="webinar__card-body--date">May 11 & 12, 2 pm ET</div>
+<div class="webinar__card-body--content">
+<p class="series-name">Mastering QuickBooks 2022</p>
+<div class="webinar-title">
+<p>The How-to Clinic for Nonprofit Bookkeepers for Online QuickBooks Users</p>
+</div>
+</div>
+<a class="webinar-button" href="https://store.nonprofitquarterly.org/products/mastering-quickbooks-2022-the-how-to-clinic-for-nonprofit-bookkeepers-for-online-quickbooks-users" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Register</a>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+<div class="ad-block" style="margin-bottom:5px;"><div id="div-gpt-ad-1501526414099-4"><script type="cee8df0dd8516995edb062e3-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1501526414099-4'); });</script></div></div><div class="ad-block" style="margin-bottom:5px;"><div id="div-gpt-ad-1569874932810-0"><script type="cee8df0dd8516995edb062e3-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1569874932810-0'); });</script></div></div> <div class="ad-block" style="margin-bottom:5px;"><div id="div-gpt-ad-1569875248555-0"><script type="cee8df0dd8516995edb062e3-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1569875248555-0'); });</script></div></div> </div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="author-list-section">
+<h6 class="module-title">You might also like</h6>
+<div class="row">
+<div class="col-md-4">
+<article class="grid-item">
+<div class="grid-image">
+<div class="premium-buttons related-posts">
+</div>
+<div class="image-wrap">
+<img width="1000" height="667" src="https://nonprofitquarterly.org/wp-content/uploads/2022/02/marissa-eric-street-unsplash.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://nonprofitquarterly.org/wp-content/uploads/2022/02/marissa-eric-street-unsplash.jpg 1000w, https://nonprofitquarterly.org/wp-content/uploads/2022/02/marissa-eric-street-unsplash-300x200.jpg 300w, https://nonprofitquarterly.org/wp-content/uploads/2022/02/marissa-eric-street-unsplash-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /> </div>
+</div>
+<div class="grid-content eq-height">
+<h6>
+<a href="https://nonprofitquarterly.org/edgar-cahns-second-act-time-banking-and-the-return-of-mutual-aid/" data-wpel-link="internal">
+Edgar Cahn’s Second Act: Time Banking and the Return of... </a>
+ </h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/sdubb/" title="Posts by Steve Dubb" class="author url fn" rel="author" data-wpel-link="internal">Steve Dubb</a></div>
+</div>
+</div>
+</article>
+</div>
+<div class="col-md-4">
+<article class="grid-item">
+<div class="grid-image">
+<div class="premium-buttons related-posts">
+</div>
+<div class="image-wrap">
+<img width="1000" height="667" src="https://nonprofitquarterly.org/wp-content/uploads/2022/02/womanizer-toys-8oB43mw658c-unsplash.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://nonprofitquarterly.org/wp-content/uploads/2022/02/womanizer-toys-8oB43mw658c-unsplash.jpg 1000w, https://nonprofitquarterly.org/wp-content/uploads/2022/02/womanizer-toys-8oB43mw658c-unsplash-300x200.jpg 300w, https://nonprofitquarterly.org/wp-content/uploads/2022/02/womanizer-toys-8oB43mw658c-unsplash-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /> </div>
+</div>
+<div class="grid-content eq-height">
+<h6>
+<a href="https://nonprofitquarterly.org/we-owe-you-nothing-the-movement-to-cancel-student-debt-gains-ground/" data-wpel-link="internal">
+We Owe You Nothing: The Movement to Cancel Student Debt... </a>
+</h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/rithika-ramamurthy/" title="Posts by Rithika Ramamurthy" class="author url fn" rel="author" data-wpel-link="internal">Rithika Ramamurthy</a></div>
+</div>
+</div>
+</article>
+</div>
+<div class="col-md-4">
+<article class="grid-item">
+<div class="grid-image">
+<div class="premium-buttons related-posts">
+</div>
+<div class="image-wrap">
+
+<img width="1000" height="667" src="https://nonprofitquarterly.org/wp-content/uploads/2022/02/pexels-luis-quintero-2339722.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://nonprofitquarterly.org/wp-content/uploads/2022/02/pexels-luis-quintero-2339722.jpg 1000w, https://nonprofitquarterly.org/wp-content/uploads/2022/02/pexels-luis-quintero-2339722-300x200.jpg 300w, https://nonprofitquarterly.org/wp-content/uploads/2022/02/pexels-luis-quintero-2339722-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /> </div>
+</div>
+<div class="grid-content eq-height">
+<h6>
+<a href="https://nonprofitquarterly.org/charitable-tax-reform-why-half-measures-wont-curb-plutocracy/" data-wpel-link="internal">
+Charitable Tax Reform: Why Half Measures Won’t Curb... </a>
+</h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/alan-davis/" title="Posts by Alan Davis" class="author url fn" rel="author" data-wpel-link="internal">Alan Davis</a></div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-section post equity-section">
+<div class="container">
+<div class="content-inner bottom-content">
+<h6 class="module-title">WOMEN OF COLOR IN POWER</h6>
+<div class="row">
+<div class="col-md-4">
+<div class="card podcast-block">
+<div class="top">
+<div class="image">
+<img src="/wp-content/uploads/2021/09/WOCIP_Logo.jpeg" alt="">
+</div>
+<div class="card-content">
+<h5 class="card-title">Women of Color in Power</h5>
+<p class="card-text">Listen wherever you get your podcasts.</p>
+</div>
+</div>
+<div class="card-action">
+<a href="/wocip/" class="btn btn-primary" data-wpel-link="internal">Subscribe</a>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<article class="grid-item">
+<div class="grid-image">
+<a href="https://nonprofitquarterly.org/rep-ayanna-pressley-and-authentic-leadership/" data-wpel-link="internal">
+<div class="image-wrap imgLiquid_bgSize imgLiquid_ready" style="background-image: url('https://nonprofitquarterly.org/wp-content/uploads/2021/10/AP_nocutoff-1-470x304.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+<img src="https://nonprofitquarterly.org/wp-content/uploads/2021/10/AP_nocutoff-1.jpg" alt="" style="display: none;">
+</div>
+</a>
+</div>
+<div class="grid-content">
+<h6><a href="https://nonprofitquarterly.org/rep-ayanna-pressley-and-authentic-leadership/" data-wpel-link="internal">
+Rep. Ayanna Pressley and Authentic Leadership </a>
+</h6>
+</div>
+</article>
+</div>
+<div class="col-md-4">
+<article class="grid-item">
+<div class="grid-image">
+<a href="https://nonprofitquarterly.org/reclaiming-interrupted-lineages/" data-wpel-link="internal">
+<div class="image-wrap imgLiquid_bgSize imgLiquid_ready" style="background-image: url('https://nonprofitquarterly.org/wp-content/uploads/2021/05/luana-morales-wide-470x304.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+<img src="https://nonprofitquarterly.org/wp-content/uploads/2021/05/luana-morales-wide.jpg" alt="" style="display: none;">
+</div>
+</a>
+</div>
+<div class="grid-content">
+<h6><a href="https://nonprofitquarterly.org/reclaiming-interrupted-lineages/" data-wpel-link="internal">
+Reclaiming Interrupted Lineages </a>
+</h6>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer-container">
+<div class="footer-top">
+<div class="container">
+<div class="row topblock d-flex align-items-center" style="justify-content: space-around;">
+<div class="col-md7">
+<div class="signup-form">
+<h4>Like what you see?</h4>
+<p>Subscribe to the <i style="font-style: italic;">NPQ</i> newsletter to have our top stories delivered directly to your inbox.</p>
+<div class="privy-embed-form" data-campaign="2899395"></div>
+<p class="form-subtext">By signing up, you agree to our privacy policy and terms of use, and to receive messages from NPQ and our partners.</p>
+</div> </div>
+<div class="col-md5">
+<div class="footer-subscribe-wrapper">
+<div class="footer-subscribe-section">
+<div><div class="textwidget custom-html-widget"><img src="https://nonprofitquarterly.org/wp-content/uploads/2021/10/Screen-Shot-2021-10-26-at-10.48.37-AM.png" /></div></div> <div class="footer-subscribe-section__text">
+<h4>Independent & in your mailbox.</h4>
+<p>Subscribe today and get a full year of NPQ for just $59.</p>
+<a href="https://npqmag.xsubscribe.com/subscribe/" class="button subscribe" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">subscribe</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row bottomblock">
+<div class="col-lg-4 col-md-3">
+</div>
+<div class="col-lg-8 col-md-9">
+<div class="menu-links">
+<div class="menu-footer-menu-container"><ul id="footer-menu" class="menu"><li id="menu-item-3527102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3527102"><a href="https://nonprofitquarterly.org/about-us/" data-wpel-link="internal">About</a></li>
+<li id="menu-item-2925502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2925502"><a href="https://nonprofitquarterly.org/customer-support/" data-wpel-link="internal">Contact</a></li>
+<li id="menu-item-3544055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3544055"><a href="https://nonprofitquarterly.org/submissions/" data-wpel-link="internal">Submissions</a></li>
+<li id="menu-item-2925503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2925503"><a href="https://nonprofitquarterly.org/nonprofit-advertising/" data-wpel-link="internal">Advertisers</a></li>
+<li id="menu-item-3524247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3524247"><a href="https://nonprofitquarterly.org/newsletters/" data-wpel-link="internal">Newsletters</a></li>
+<li id="menu-item-2925515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2925515"><a href="https://nonprofitquarterly.org/copyright-policy/" data-wpel-link="internal">Copyright</a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="webinar-popup-bk modal fade" id="webinarModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="container">
+<div class="webinar-popup">
+<div class="modal-dialog" role="document">
+<h3>
+Subscribe to View Webinars
+</h3>
+<script charset="utf-8" type="cee8df0dd8516995edb062e3-text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript">
+hbspt.forms.create({
+portalId: "407546",
+formId: "66b0a3e1-a405-44ad-8168-a5e6a8125b46"
+});
+</script> </div>
+</div>
+</div>
+</div>
+<div class="audio-player-container">
+</div>
+<script type="cee8df0dd8516995edb062e3-text/javascript">
+  if (document.getElementById('disqus_thread')) {
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://npquarterly.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+</script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" id='monsterinsights-frontend-script-js-extra'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/nonprofitquarterly.org","hash_tracking":"false","ua":"UA-4988227-2","v4_id":""};
+/* ]]> */
+</script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/google-analytics-premium/assets/js/frontend-gtag.min.js?ver=8.3.0' id='monsterinsights-frontend-script-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" id='disqus_count-js-extra'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"npquarterly"};
+/* ]]> */
+</script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.22' id='disqus_count-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" id='disqus_embed-js-extra'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.22"},"disqusIdentifier":"3529269 https:\/\/nonprofitquarterly.org\/?p=3529269","disqusShortname":"npquarterly","disqusTitle":"New York City\u2019s Algorithm Task Force Report Evades Core Democratic Issues","disqusUrl":"https:\/\/nonprofitquarterly.org\/new-york-citys-algorithm-task-force-report-evades-core-democratic-issues\/","postId":"3529269"};
+/* ]]> */
+</script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/disqus-comment-system/public/js/comment_embed.js?ver=3.0.22' id='disqus_embed-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://code.jquery.com/jquery-1.12.4.min.js?ver=1.12.4' id='jquery-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" id='social_warfare_script-js-extra'>
+/* <![CDATA[ */
+var socialWarfare = {"addons":["pro"],"post_id":"3529269","variables":{"emphasizeIcons":"0","powered_by_toggle":false,"affiliate_link":"https:\/\/warfareplugins.com"},"floatBeforeContent":""};
+/* ]]> */
+</script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/social-warfare/assets/js/script.min.js?ver=4.3.0' id='social_warfare_script-js'></script>
+<script type='application/json' id='wpp-json'>
+{"sampling_active":0,"sampling_rate":100,"ajax_url":"https:\/\/nonprofitquarterly.org\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","api_url":"https:\/\/nonprofitquarterly.org\/wp-json\/wordpress-popular-posts","ID":3529269,"token":"7ab52cb51c","lang":0,"debug":0}
+</script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=5.5.1' id='wpp-js-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/ofi.min.js?ver=3.2.3' id='ofi-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery-ui.min.js?ver=1.14.0' id='jquery-ui-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/matchHeight.js?ver=1.2.0' id='match-height-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/imgLiquid-min.js?ver=1.2.0' id='img-liquid-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/slick.min.js?ver=1.2.0' id='slick-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.selectBox.js?ver=1.2.0' id='selectBox-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.modal.js?ver=1.2.3' id='jquery-modal-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='//cdn.jsdelivr.net/npm/sweetalert2@8?ver=1.2.0' id='sweetalert2-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/chosen.jquery.min.js?ver=1.8.7' id='chosen-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.mousewheel.min.js?ver=1.2.0' id='jquery-mousewheel-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.touchSwipe.min.js?ver=1.2.0' id='jquery-touchswipe-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.cookie.js?ver=0.8.8.1652612985' id='jquery-cookie-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.nicescroll.min.js?ver=3.7.6' id='jquery-nicescroll-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/audio7_html5.js?ver=1.9.2' id='audio7-html5-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/theme.min.js?ver=0.8.8.1652612985-2' id='understrap-scripts-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" id='main-js-js-extra'>
+/* <![CDATA[ */
+var site_info = {"ajax_url":"https:\/\/nonprofitquarterly.org\/wp-admin\/admin-ajax.php","root_url":"https:\/\/nonprofitquarterly.org"};
+/* ]]> */
+</script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/main.js?ver=0.8.8.1652612985' id='main-js-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-includes/js/comment-reply.min.js?ver=5.8.3' id='comment-reply-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" id='moove_gdpr_frontend-js-extra'>
+/* <![CDATA[ */
+var moove_frontend_gdpr_scripts = {"ajaxurl":"https:\/\/nonprofitquarterly.org\/wp-admin\/admin-ajax.php","post_id":"3529269","plugin_dir":"https:\/\/nonprofitquarterly.org\/wp-content\/plugins\/gdpr-cookie-compliance","show_icons":"all","is_page":"","strict_init":"1","enabled_default":{"third_party":0,"advanced":0},"geo_location":"false","force_reload":"false","is_single":"1","hide_save_btn":"false","current_user":"0","cookie_expiration":"365","script_delay":"2000","gdpr_scor":"true","wp_lang":""};
+/* ]]> */
+</script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/gdpr-cookie-compliance/dist/scripts/main.js?ver=4.7.2' id='moove_gdpr_frontend-js'></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src='https://nonprofitquarterly.org/wp-includes/js/wp-embed.min.js?ver=5.8.3' id='wp-embed-js'></script>
+<aside id="moove_gdpr_cookie_info_bar" class="moove-gdpr-info-bar-hidden moove-gdpr-align-center moove-gdpr-dark-scheme gdpr_infobar_postion_bottom" role="note" aria-label="GDPR Cookie Banner" style="display: none;">
+<div class="moove-gdpr-info-bar-container">
+<div class="moove-gdpr-info-bar-content">
+<div class="moove-gdpr-cookie-notice">
+<p>We are using cookies to give you the best experience on our website.</p>
+<p>&nbsp;</p>
+</div>
+<div class="moove-gdpr-button-holder">
+<button class="mgbutton moove-gdpr-infobar-allow-all gdpr-fbo-0" aria-label="Accept">Accept</button>
+</div>
+</div>
+</div>
+</aside>
+<script type="cee8df0dd8516995edb062e3-text/javascript">
+		/* MonsterInsights Scroll Tracking */
+			if ( typeof(jQuery) !== 'undefined' ) {
+				jQuery( document ).ready(function(){
+					function monsterinsights_scroll_tracking_load() {
+						if ( ( typeof(__gaTracker) !== 'undefined' && __gaTracker && __gaTracker.hasOwnProperty( "loaded" ) && __gaTracker.loaded == true ) || ( typeof(__gtagTracker) !== 'undefined' && __gtagTracker ) ) {
+							(function(factory) {
+								factory(jQuery);
+							}(function($) {
+
+								/* Scroll Depth */
+								"use strict";
+								var defaults = {
+									percentage: true
+								};
+
+								var $window = $(window),
+									cache = [],
+									scrollEventBound = false,
+									lastPixelDepth = 0;
+
+								/*
+								 * Plugin
+								 */
+
+								$.scrollDepth = function(options) {
+
+									var startTime = +new Date();
+
+									options = $.extend({}, defaults, options);
+
+									/*
+									 * Functions
+									 */
+
+									function sendEvent(action, label, scrollDistance, timing) {
+										if ( 'undefined' === typeof MonsterInsightsObject || 'undefined' === typeof MonsterInsightsObject.sendEvent ) {
+											return;
+										}
+											var type        = 'event';
+	var eventName   = action;
+	var fieldsArray = {
+		event_category : 'Scroll Depth',
+		event_label    : label,
+		value          : 1,
+		non_interaction: true,
+		send_to: 'UA-4988227-2'
+	};
+
+	MonsterInsightsObject.sendEvent( type, eventName, fieldsArray );
+
+	if (arguments.length > 3) {
+		var type        = 'event';
+		var eventName   = 'timing_complete';
+		fieldsArray = {
+			event_category : 'Scroll Depth',
+			name           : action,
+			event_label    : label,
+			value          : timing,
+			non_interaction: 1,
+			send_to: 'UA-4988227-2'
+		};
+
+		MonsterInsightsObject.sendEvent( type, eventName, fieldsArray );
+	}
+										}
+
+									function calculateMarks(docHeight) {
+										return {
+											'25%' : parseInt(docHeight * 0.25, 10),
+											'50%' : parseInt(docHeight * 0.50, 10),
+											'75%' : parseInt(docHeight * 0.75, 10),
+											/* Cushion to trigger 100% event in iOS */
+											'100%': docHeight - 5
+										};
+									}
+
+									function checkMarks(marks, scrollDistance, timing) {
+										/* Check each active mark */
+										$.each(marks, function(key, val) {
+											if ( $.inArray(key, cache) === -1 && scrollDistance >= val ) {
+												sendEvent('Percentage', key, scrollDistance, timing);
+												cache.push(key);
+											}
+										});
+									}
+
+									function rounded(scrollDistance) {
+										/* Returns String */
+										return (Math.floor(scrollDistance/250) * 250).toString();
+									}
+
+									function init() {
+										bindScrollDepth();
+									}
+
+									/*
+									 * Public Methods
+									 */
+
+									/* Reset Scroll Depth with the originally initialized options */
+									$.scrollDepth.reset = function() {
+										cache = [];
+										lastPixelDepth = 0;
+										$window.off('scroll.scrollDepth');
+										bindScrollDepth();
+									};
+
+									/* Add DOM elements to be tracked */
+									$.scrollDepth.addElements = function(elems) {
+
+										if (typeof elems == "undefined" || !$.isArray(elems)) {
+											return;
+										}
+
+										$.merge(options.elements, elems);
+
+										/* If scroll event has been unbound from window, rebind */
+										if (!scrollEventBound) {
+											bindScrollDepth();
+										}
+
+									};
+
+									/* Remove DOM elements currently tracked */
+									$.scrollDepth.removeElements = function(elems) {
+
+										if (typeof elems == "undefined" || !$.isArray(elems)) {
+											return;
+										}
+
+										$.each(elems, function(index, elem) {
+
+											var inElementsArray = $.inArray(elem, options.elements);
+											var inCacheArray = $.inArray(elem, cache);
+
+											if (inElementsArray != -1) {
+												options.elements.splice(inElementsArray, 1);
+											}
+
+											if (inCacheArray != -1) {
+												cache.splice(inCacheArray, 1);
+											}
+
+										});
+
+									};
+
+									/*
+									 * Throttle function borrowed from:
+									 * Underscore.js 1.5.2
+									 * http://underscorejs.org
+									 * (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+									 * Underscore may be freely distributed under the MIT license.
+									 */
+
+									function throttle(func, wait) {
+										var context, args, result;
+										var timeout = null;
+										var previous = 0;
+										var later = function() {
+											previous = new Date;
+											timeout = null;
+											result = func.apply(context, args);
+										};
+										return function() {
+											var now = new Date;
+											if (!previous) previous = now;
+											var remaining = wait - (now - previous);
+											context = this;
+											args = arguments;
+											if (remaining <= 0) {
+												clearTimeout(timeout);
+												timeout = null;
+												previous = now;
+												result = func.apply(context, args);
+											} else if (!timeout) {
+												timeout = setTimeout(later, remaining);
+											}
+											return result;
+										};
+									}
+
+									/*
+									 * Scroll Event
+									 */
+
+									function bindScrollDepth() {
+
+										scrollEventBound = true;
+
+										$window.on('scroll.scrollDepth', throttle(function() {
+											/*
+											 * We calculate document and window height on each scroll event to
+											 * account for dynamic DOM changes.
+											 */
+
+											var docHeight = $(document).height(),
+												winHeight = window.innerHeight ? window.innerHeight : $window.height(),
+												scrollDistance = $window.scrollTop() + winHeight,
+
+												/* Recalculate percentage marks */
+												marks = calculateMarks(docHeight),
+
+												/* Timing */
+												timing = +new Date - startTime;
+
+											checkMarks(marks, scrollDistance, timing);
+										}, 500));
+
+									}
+
+									init();
+								};
+
+								/* UMD export */
+								return $.scrollDepth;
+
+							}));
+
+							jQuery.scrollDepth();
+						} else {
+							setTimeout(monsterinsights_scroll_tracking_load, 200);
+						}
+					}
+					monsterinsights_scroll_tracking_load();
+				});
+			}
+		/* End MonsterInsights Scroll Tracking */
+		
+</script>
+<div id="moove_gdpr_cookie_modal" class="gdpr_lightbox-hide" role="complementary" aria-label="GDPR Settings Screen">
+<div class="moove-gdpr-modal-content moove-clearfix logo-position-left moove_gdpr_modal_theme_v1">
+<button class="moove-gdpr-modal-close" aria-label="Close GDPR Cookie Settings">
+<span class="gdpr-sr-only">Close GDPR Cookie Settings</span>
+<span class="gdpr-icon moovegdpr-arrow-close"></span>
+</button>
+<div class="moove-gdpr-modal-left-content">
+<div class="moove-gdpr-company-logo-holder">
+<img src="https://nonprofitquarterly.org/wp-content/plugins/gdpr-cookie-compliance/dist/images/gdpr-logo.png" alt="Non Profit News | Nonprofit Quarterly" width="350" height="233" class="img-responsive" />
+</div>
+<ul id="moove-gdpr-menu">
+<li class="menu-item-on menu-item-privacy_overview menu-item-selected">
+<button data-href="#privacy_overview" class="moove-gdpr-tab-nav" aria-label="Privacy Overview">
+<span class="gdpr-svg-icon">
+<svg class="icon icon-privacy-overview" viewBox="0 0 26 32">
+<path d="M11.082 27.443l1.536 0.666 1.715-0.717c5.018-2.099 8.294-7.014 8.294-12.442v-5.734l-9.958-5.325-9.702 5.325v5.862c0 5.376 3.2 10.24 8.115 12.365zM4.502 10.138l8.166-4.506 8.397 4.506v4.813c0 4.838-2.893 9.19-7.347 11.034l-1.101 0.461-0.922-0.41c-4.352-1.894-7.194-6.195-7.194-10.957v-4.941zM12.029 14.259h1.536v7.347h-1.536v-7.347zM12.029 10.394h1.536v2.483h-1.536v-2.483z" fill="currentColor"></path>
+</svg>
+</span>
+<span class="gdpr-nav-tab-title">Privacy Overview</span>
+</button>
+</li>
+<li class="menu-item-strict-necessary-cookies menu-item-off">
+<button data-href="#strict-necessary-cookies" class="moove-gdpr-tab-nav" aria-label="Strictly Necessary Cookies">
+<span class="gdpr-svg-icon">
+<svg class="icon icon-strict-necessary" viewBox="0 0 26 32">
+<path d="M22.685 5.478l-9.984 10.752-2.97-4.070c-0.333-0.461-0.973-0.538-1.434-0.205-0.435 0.333-0.538 0.947-0.23 1.408l3.686 5.094c0.179 0.256 0.461 0.41 0.768 0.435h0.051c0.282 0 0.538-0.102 0.742-0.307l10.854-11.699c0.358-0.435 0.333-1.075-0.102-1.434-0.384-0.384-0.998-0.358-1.382 0.026v0zM22.301 12.954c-0.563 0.102-0.922 0.64-0.794 1.203 0.128 0.614 0.179 1.229 0.179 1.843 0 5.094-4.122 9.216-9.216 9.216s-9.216-4.122-9.216-9.216 4.122-9.216 9.216-9.216c1.536 0 3.021 0.384 4.378 1.101 0.512 0.23 1.126 0 1.357-0.538 0.205-0.461 0.051-0.998-0.384-1.254-5.478-2.944-12.314-0.922-15.283 4.557s-0.922 12.314 4.557 15.258 12.314 0.922 15.258-4.557c0.896-1.638 1.357-3.482 1.357-5.35 0-0.768-0.077-1.51-0.23-2.253-0.102-0.538-0.64-0.896-1.178-0.794z" fill="currentColor"></path>
+</svg>
+</span>
+<span class="gdpr-nav-tab-title">Strictly Necessary Cookies</span>
+</button>
+</li>
+</ul>
+<div class="moove-gdpr-branding-cnt">
+<a href="https://wordpress.org/plugins/gdpr-cookie-compliance/" target="_blank" rel="noopener noreferrer nofollow external" class="moove-gdpr-branding" data-wpel-link="external">Powered by&nbsp; <span>GDPR Cookie Compliance</span></a>
+</div>
+</div>
+<div class="moove-gdpr-modal-right-content">
+<div class="moove-gdpr-modal-title">
+</div>
+<div class="main-modal-content">
+<div class="moove-gdpr-tab-content">
+<div id="privacy_overview" class="moove-gdpr-tab-main">
+<span class="tab-title">Privacy Overview</span>
+<div class="moove-gdpr-tab-main-content">
+<p>This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.</p>
+</div>
+</div>
+<div id="strict-necessary-cookies" class="moove-gdpr-tab-main" style="display:none">
+<span class="tab-title">Strictly Necessary Cookies</span>
+<div class="moove-gdpr-tab-main-content">
+<p>Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.</p>
+<div class="moove-gdpr-status-bar">
+<div class="gdpr-cc-form-wrap">
+<div class="gdpr-cc-form-fieldset">
+<label class="cookie-switch" for="moove_gdpr_strict_cookies">
+<span class="gdpr-sr-only">Enable or Disable Cookies</span>
+<input type="checkbox" aria-label="Strictly Necessary Cookies" value="check" name="moove_gdpr_strict_cookies" id="moove_gdpr_strict_cookies">
+<span class="cookie-slider cookie-round" data-text-enable="Enabled" data-text-disabled="Disabled"></span>
+</label>
+</div>
+</div>
+</div>
+<div class="moove-gdpr-strict-warning-message" style="margin-top: 10px;">
+<p>If you disable this cookie, we will not be able to save your preferences. This means that every time you visit this website you will need to enable or disable cookies again.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="moove-gdpr-modal-footer-content">
+<div class="moove-gdpr-button-holder">
+<button class="mgbutton moove-gdpr-modal-allow-all button-visible" aria-label="Enable All">Enable All</button>
+<button class="mgbutton moove-gdpr-modal-save-settings button-visible" aria-label="Save Settings">Save Settings</button>
+</div>
+</div>
+</div>
+<div class="moove-clearfix"></div>
+</div>
+</div>
+<script type="cee8df0dd8516995edb062e3-text/javascript"> var swp_nonce = "6a6998564c";var swpFloatBeforeContent = false; var swp_ajax_url = "https://nonprofitquarterly.org/wp-admin/admin-ajax.php"; var swp_post_id = "3529269";var swpClickTracking = false; swpPinIt={"enabled":false};</script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/407546.js"></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript" src="https://commerce-static.heyoya.com/b2b/b2b_settings.hey?affId=sjhBXaBwZw"></script>
+<script type="cee8df0dd8516995edb062e3-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bb9b7847a8","applicationID":"290946388","transactionName":"MQZbZEUHCBIHAEQNCQhMeFNDDwkPSRBZCgEKBg==","queueTime":0,"applicationTime":2617,"atts":"HUFYEg0dGxw=","errorBeacon":"bam.nr-data.net","agent":""}</script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="cee8df0dd8516995edb062e3-|49" defer=""></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"70c5c2931da503fc","version":"2021.12.0","r":1,"token":"66a3f7636ffe497ebdfd90cce0f49b9b","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
+<script type="cee8df0dd8516995edb062e3-text/javascript">
+// Discuss toggler
+jQuery(function ($) {
+    $(window).load(function () {
+        if ($('#comment-toggler').length) {
+            $('#comment-toggler').click(function () {
+                $('#disqus_thread').toggleClass('open');
+            });
+        }
+    });
+});
+</script>

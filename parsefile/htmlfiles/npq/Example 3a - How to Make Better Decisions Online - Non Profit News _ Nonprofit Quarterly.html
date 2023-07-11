@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8"><script type="1843ac42367c0d85701936f0-text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"bb9b7847a8",applicationID:"290946388"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css88210edae050937006ce78c5924e7342b284fc33cd984823af9c7f39d62d1.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css0bc4392b1684b39c8a699d94c3aab2b0a218c96d164f0d1f3825dda7be9f2.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssb804a99178f380c4b2da87170fd8f9449f5f9d590a77fc797cfbf1560b536.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssfcb941e70cb258d37592e15f8e929a0c6ed9a97c4e1742634c8a2a786fcaf.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css9b73ca6c4096eec8ec26a34c4e0f653e0766a989c4cffe0af003e818e3836.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css7dd791796df19893629b18b657973eea6d251e7a8d3b674c51236feb62a01.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssc43cdfdab8c214c6c2f1017a775e5109b89bbd506befcc5118d93367a0b7c.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css7ea931ed3573026e31c5fb52ef94cb7c6e2a55c719ccde992624c286356e6.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css59043168ebfe31ddbbcc645c787ef86342c59e2cb710d8cf5f7b6a06571c5.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css08f9366af1c5cdccbc60cb546463cb29663100171850cfe85d9682b51b5ec.css" as="style" media="all" />
+<link rel="preload" href="https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssa5608f92f53df23e60c6b1f6b2b1fa9f664a9f8d985c4b58c0efd3ec4cb3c.css" as="style" media="all" /><script data-cfasync="false">function fvmuag(){var e=navigator.userAgent;if(e.match(/x11.*ox\/54|id\s4.*us.*ome\/62|oobo|ight|tmet|eadl|ngdo|PTST/i))return!1;if(e.match(/x11.*me\/86\.0/i)){var r=screen.width;if("number"==typeof r&&1367==r)return!1}return!0}</script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" /><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Non Profit News | Nonprofit Quarterly - Journalism for Non-profit Organizations and Leaders"><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /><meta property="og:description" content="A new wave of digital platforms can help you make democratic decisions about grants, budgets, and policies. It’s time to upgrade your decision-making. "><meta property="og:title" content="How to Make Better Decisions Online"><meta property="article_author" content="Aine Creedon"><meta property="article_publisher" content="https://www.facebook.com/TheNonprofitQuarterly/"><meta property="og:image" content="https://nonprofitquarterly.org/wp-content/uploads/2022/05/jon-tyson-qAZO-yes-graffiti-unsplash-2.jpg"><meta property="fb:app_id" content="529576650555031"><meta property="og:type" content="article"><meta property="og:url" content="https://nonprofitquarterly.org/how-to-make-better-decisions-online/"><meta property="og:site_name" content="Non Profit News | Nonprofit Quarterly"><meta property="article:published_time" content="2022-05-03T08:42:02-05:00"><meta property="article:modified_time" content="2022-05-03T08:55:29-05:00"><meta property="og:updated_time" content="2022-05-03T08:55:29-05:00"><meta name="twitter:title" content="How to Make Better Decisions Online"><meta name="twitter:description" content="A new wave of digital platforms can help you make democratic decisions about grants, budgets, and policies. It’s time to upgrade your decision-making. "><meta name="twitter:image" content="https://nonprofitquarterly.org/wp-content/uploads/2022/05/jon-tyson-qAZO-yes-graffiti-unsplash-2.jpg"><meta name="twitter:site" content="@npquarterly"><meta name="twitter:creator" content="@npquarterly"><meta name="twitter:card" content="summary_large_image"><title>How to Make Better Decisions Online - Non Profit News | Nonprofit Quarterly</title><link rel="canonical" href="https://nonprofitquarterly.org/how-to-make-better-decisions-online/" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="How to Make Better Decisions Online - Non Profit News | Nonprofit Quarterly" /><meta property="og:description" content="A new wave of digital platforms can help you make democratic decisions about grants, budgets, and policies. It’s time to upgrade your decision-making." /><meta property="og:url" content="https://nonprofitquarterly.org/how-to-make-better-decisions-online/" /><meta property="og:site_name" content="Non Profit News | Nonprofit Quarterly" /><meta property="article:publisher" content="https://www.facebook.com/TheNonprofitQuarterly/" /><meta property="article:published_time" content="2022-05-03T13:42:02+00:00" /><meta property="article:modified_time" content="2022-05-03T13:55:29+00:00" /><meta property="og:image" content="https://nonprofitquarterly.org/wp-content/uploads/2022/05/jon-tyson-qAZO-yes-graffiti-unsplash-2.jpg" /><meta property="og:image:width" content="1000" /><meta property="og:image:height" content="750" /><meta property="og:image:type" content="image/jpeg" /><meta name="twitter:card" content="summary" /><meta name="twitter:creator" content="@anye_east" /><meta name="twitter:site" content="@npquarterly" /><meta name="twitter:label1" content="Written by" /><meta name="twitter:data1" content="Aine Creedon" /><meta name="twitter:label2" content="Est. reading time" /><meta name="twitter:data2" content="9 minutes" /><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://nonprofitquarterly.org/#website","url":"https://nonprofitquarterly.org/","name":"Non Profit News | Nonprofit Quarterly","description":"Journalism for Non-profit Organizations and Leaders","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://nonprofitquarterly.org/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://nonprofitquarterly.org/how-to-make-better-decisions-online/#primaryimage","inLanguage":"en-US","url":"https://nonprofitquarterly.org/wp-content/uploads/2022/05/jon-tyson-qAZO-yes-graffiti-unsplash-2.jpg","contentUrl":"https://nonprofitquarterly.org/wp-content/uploads/2022/05/jon-tyson-qAZO-yes-graffiti-unsplash-2.jpg","width":1000,"height":750},{"@type":"WebPage","@id":"https://nonprofitquarterly.org/how-to-make-better-decisions-online/#webpage","url":"https://nonprofitquarterly.org/how-to-make-better-decisions-online/","name":"How to Make Better Decisions Online - Non Profit News | Nonprofit Quarterly","isPartOf":{"@id":"https://nonprofitquarterly.org/#website"},"primaryImageOfPage":{"@id":"https://nonprofitquarterly.org/how-to-make-better-decisions-online/#primaryimage"},"datePublished":"2022-05-03T13:42:02+00:00","dateModified":"2022-05-03T13:55:29+00:00","author":{"@id":"https://nonprofitquarterly.org/#/schema/person/c37abb6d387983be607d420a1580507b"},"breadcrumb":{"@id":"https://nonprofitquarterly.org/how-to-make-better-decisions-online/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://nonprofitquarterly.org/how-to-make-better-decisions-online/"]}]},{"@type":"BreadcrumbList","@id":"https://nonprofitquarterly.org/how-to-make-better-decisions-online/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nonprofitquarterly.org/"},{"@type":"ListItem","position":2,"name":"How to Make Better Decisions Online"}]},{"@type":"Person","@id":"https://nonprofitquarterly.org/#/schema/person/c37abb6d387983be607d420a1580507b","name":"Aine Creedon","image":{"@type":"ImageObject","@id":"https://nonprofitquarterly.org/#personlogo","inLanguage":"en-US","url":"https://nonprofitquarterly.org/wp-content/uploads/2019/03/Aine-headshot-wide.jpg","contentUrl":"https://nonprofitquarterly.org/wp-content/uploads/2019/03/Aine-headshot-wide.jpg","caption":"Aine Creedon"},"description":"Aine Creedon is Nonprofit Quarterly's Digital Publishing Coordinator and has worn many hats at NPQ over the past five years. She has extensive experience with social media, communications and outreach in the nonprofit sector, and spent two years in Americorps programs serving with a handful of organizations across the nation. Aine currently resides in Denver, Colorado where she enjoys hiking with her pups Frida and Tucker. She enjoys volunteering in her free time and also serves on the advisory board for the Young Nonprofit Professionals Network Denver and is the Marketing Liaison for YNPN Denver's Professional Development Committee.","sameAs":["https://twitter.com/anye_east"],"url":"https://nonprofitquarterly.org/author/acreedon/"}]}</script><link rel="alternate" type="application/rss+xml" title="Non Profit News | Nonprofit Quarterly &raquo; Feed" href="https://nonprofitquarterly.org/feed/" /><link rel="alternate" type="application/rss+xml" title="Non Profit News | Nonprofit Quarterly &raquo; Comments Feed" href="https://nonprofitquarterly.org/comments/feed/" /><link rel="alternate" type="application/rss+xml" title="Non Profit News | Nonprofit Quarterly &raquo; How to Make Better Decisions Online Comments Feed" href="https://nonprofitquarterly.org/how-to-make-better-decisions-online/feed/" />
+<script type="1843ac42367c0d85701936f0-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KX7GKF');</script>
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="shortcut icon" href="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/favicon.ico">
+<script type="1843ac42367c0d85701936f0-text/javascript">
+      var ajaxurl = 'https://nonprofitquarterly.org/wp-admin/admin-ajax.php';
+	</script>
+<style media="all">@font-face{font-family:"sw-icon-font";src:url(https://nonprofitquarterly.org/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.woff?ver=4.3.0) format("woff");font-weight:400;font-style:normal;font-display:block}</style>
+<script src="//www.googletagmanager.com/gtag/js?id=UA-4988227-2" type="text/javascript" data-cfasync="false" data-wpfc-render="false" async></script>
+<script type="text/javascript" data-cfasync="false" data-wpfc-render="false">
+				var mi_version = '8.3.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+															'ga-disable-UA-4988227-2',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						if ( document.cookie.indexOf( disableStrs[ index ] + '=true' ) > -1 ) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						document.cookie = disableStrs[ index ] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if ( mi_track_user ) {
+					function __gtagDataLayer() {
+						dataLayer.push( arguments );
+					}
+
+					function __gtagTracker( type, name, parameters ) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply( null, arguments );
+							return;
+						}
+
+						if ( type === 'event' ) {
+							
+															parameters.send_to = monsterinsights_frontend.ua;
+								__gtagDataLayer( type, name, parameters );
+													} else {
+							__gtagDataLayer.apply( null, arguments );
+						}
+					}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+											} );
+															__gtagTracker( 'config', 'UA-4988227-2', {"forceSSL":"true","dimension1":"post"} );
+										window.gtag = __gtagTracker;											(function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( 'pageview' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[2] ) {
+												hitObject = {
+													'eventAction': 'page_view',
+													'page_path' : arguments[2],
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof arguments[1].hitType ) {
+											hitObject = arguments[1];
+											if ( 'pageview' === hitObject.hitType ) {
+												hitObject.eventAction = 'page_view';
+											}
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var arg, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+										'page' : 'page_path',
+										'location' : 'page_location',
+										'title' : 'page_title',
+									};
+									for ( arg in args ) {
+																				if ( ! ( ! args.hasOwnProperty(arg) || ! gaMap.hasOwnProperty(arg) ) ) {
+											hit[gaMap[arg]] = args[arg];
+										} else {
+											hit[arg] = args[arg];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						})();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+<link rel='stylesheet' id='social-warfare-block-css-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css88210edae050937006ce78c5924e7342b284fc33cd984823af9c7f39d62d1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css0bc4392b1684b39c8a699d94c3aab2b0a218c96d164f0d1f3825dda7be9f2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='social_warfare-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssb804a99178f380c4b2da87170fd8f9449f5f9d590a77fc797cfbf1560b536.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssfcb941e70cb258d37592e15f8e929a0c6ed9a97c4e1742634c8a2a786fcaf.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css9b73ca6c4096eec8ec26a34c4e0f653e0766a989c4cffe0af003e818e3836.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-modal-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css7dd791796df19893629b18b657973eea6d251e7a8d3b674c51236feb62a01.css' type='text/css' media='all' />
+<link rel='stylesheet' id='audio7-html5-css-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssc43cdfdab8c214c6c2f1017a775e5109b89bbd506befcc5118d93367a0b7c.css' type='text/css' media='all' />
+<link rel='stylesheet' id='selectBox-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css7ea931ed3573026e31c5fb52ef94cb7c6e2a55c719ccde992624c286356e6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='chosen-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css59043168ebfe31ddbbcc645c787ef86342c59e2cb710d8cf5f7b6a06571c5.css' type='text/css' media='all' />
+<link rel='stylesheet' id='understrap-styles-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-css08f9366af1c5cdccbc60cb546463cb29663100171850cfe85d9682b51b5ec.css' type='text/css' media='all' />
+<link rel='stylesheet' id='moove_gdpr_frontend-css' href='https://nonprofitquarterly.org/wp-content/cache/fvm/min/1651865637-cssa5608f92f53df23e60c6b1f6b2b1fa9f664a9f8d985c4b58c0efd3ec4cb3c.css' type='text/css' media='all' />
+<style id='moove_gdpr_frontend-inline-css' type='text/css' media="all">#moove_gdpr_cookie_modal,#moove_gdpr_cookie_info_bar,.gdpr_cookie_settings_shortcode_content{font-family:Nunito,sans-serif}#moove_gdpr_save_popup_settings_button{background-color:#373737;color:#fff}#moove_gdpr_save_popup_settings_button:hover{background-color:#000}#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton,#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton{background-color:#0C4DA2}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green{background-color:#0C4DA2;border-color:#0C4DA2}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton:hover,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green:hover{background-color:#fff;color:#0C4DA2}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon{background-color:#0C4DA2;border:1px solid #0C4DA2}#moove_gdpr_cookie_info_bar span.change-settings-button.focus-g{-webkit-box-shadow:0 0 1px 3px #0C4DA2;-moz-box-shadow:0 0 1px 3px #0C4DA2;box-shadow:0 0 1px 3px #0C4DA2}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button{color:#0C4DA2}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .gdpr-acc-link{line-height:0;font-size:0;color:transparent;position:absolute}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close:hover i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button.focus-g{color:#0C4DA2}#moove_gdpr_cookie_modal.gdpr_lightbox-hide{display:none}</style>
+<style id="wpp-loading-animation-styles" media="all">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+<link rel="icon" href="https://nonprofitquarterly.org/wp-content/uploads/2021/11/cropped-NPQ-new_Logo_512-3-192x192.jpg" sizes="192x192" />
+<style type="text/css" id="wp-custom-css" media="all">body.page-template-default main article p a.no-icon:after{display:none!important}</style>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js' type="1843ac42367c0d85701936f0-text/javascript"></script>
+<script type="1843ac42367c0d85701936f0-text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+<script type="1843ac42367c0d85701936f0-text/javascript"> var _d_site = _d_site || '6792B0D2E9F28D51061FA31B'; </script>
+<script src='//widget.privy.com/assets/widget.js' async='async' type="1843ac42367c0d85701936f0-text/javascript"></script>
+<script type="1843ac42367c0d85701936f0-text/javascript">
+        googletag.cmd.push(function() {
+
+            var mapping_leader = googletag.sizeMapping().addSize([0, 0], [[300, 50], [320, 50]]).addSize([728, 200], [728, 90]).build();
+            var mapping_inline = googletag.sizeMapping().addSize([0, 0], [[300, 50], [320, 50]]).addSize([728, 200], [468, 60]).build();
+
+            googletag.defineSlot('/5047800/Homepage_MediumRectangle_Sidebar_3_300x250', [300, 250], 'div-gpt-ad-1501526414099-4').addService(googletag.pubads());
+
+googletag.defineSlot('/5047800/Article_FullBanner_Inline_468x60', [[468, 60], [300, 50]], 'div-gpt-ad-1568391674167-0').addService(googletag.pubads());
+
+googletag.defineSlot('/5047800/Homepage_MediumRectangle_Sidebar_6_300x250', [300, 250], 'div-gpt-ad-1569874932810-0').addService(googletag.pubads());
+
+googletag.defineSlot('/5047800/Homepage_FullBanner3_Inline_468x60', [[300, 50], [468, 60]], 'div-gpt-ad-1569874959269-0').addService(googletag.pubads());
+
+googletag.defineSlot('/5047800/Homepage_MediumRectangle_Sidebar_7_300x250', [300, 250], 'div-gpt-ad-1569875248555-0').addService(googletag.pubads());
+			            googletag.defineSlot('/5047800/Homepage_FullBanner_Inline_468x60', [[300, 50], [468, 60]], 'div-gpt-ad-1501526414099-0').defineSizeMapping(mapping_inline).addService(googletag.pubads());            googletag.pubads().collapseEmptyDivs();
+            googletag.pubads().setTargeting('url', ['postid-3546433']);
+            googletag.enableServices();
+        });
+    </script>
+</head>
+<body class="post-template-default single single-post postid-3546433 single-format-standard group-blog">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX7GKF"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="site main-outercon" id="page">
+<header class="header-container">
+<div class="container">
+<div class="header">
+<div class="row">
+<div class="col-12 header-top">
+<div class="logo">
+<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon">
+<div class="ham-icon">
+<div class="menui top-bar"></div>
+<div class="menui mid-bar"></div>
+<div class="menui bottom-bar"></div>
+</div>
+<span>SECTIONS</span>
+</span>
+</button>
+<a href="https://nonprofitquarterly.org/" data-wpel-link="internal">
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/logo.png" alt="logo" /></a>
+</div>
+<div class="social-icons">
+<a href="https://npqmag.xsubscribe.com/subscribe/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer"><span style="display: flex; justify-content: space-between; align-items: center; color: black;"><img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/svg/book.svg" style="margin-right: 4px;" alt="book" /> Subscribe to our Magazine</span></a>
+<ul class="list-unstyled">
+<li><a target="_blank" href="https://www.facebook.com/TheNonprofitQuarterly/" data-wpel-link="external" rel="external noopener noreferrer"><i class="fa fa-facebook" aria-hidden="true" style="padding: 5px 9px;"></i></a></li>
+<li><a target="_blank" href="https://twitter.com/npquarterly" data-wpel-link="external" rel="external noopener noreferrer"><i class="fa fa-twitter" aria-hidden="true" style="padding: 5px 6px;"></i></a></li>
+<li><a target="_blank" href="https://www.linkedin.com/company/nonprofit-quarterly/" data-wpel-link="external" rel="external noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true" style="padding: 5px 6px;"></i></a></li>
+<li><a target="_blank" href="/cdn-cgi/l/email-protection#f29b9c949db29c82839f9395dc9d8095"><i class="fa fa-envelope" aria-hidden="true" style="padding: 5px 6px;"></i></a></li>
+</ul>
+</div>
+<div class="header-links">
+<ul class="list-unstyled">
+<div class="menu-top-menu-container"><ul id="top_nav" class="menu"><li id="menu-item-3523761" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3523761"><a href="https://npqmag.xsubscribe.com/subscribe/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Magazine</a></li>
+<li id="menu-item-3527029" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3527029"><a target="_blank" rel="noopener external noreferrer" href="https://store.nonprofitquarterly.org/pages/membership-signup" data-wpel-link="external">Membership</a></li>
+<li id="menu-item-3544700" class="button-dark-red menu-item menu-item-type-custom menu-item-object-custom menu-item-3544700"><a href="https://nonprofitquarterly.networkforgood.com/projects/19393-this-is-who-npq-serves" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Donate</a></li>
+</ul></div> </ul>
+</div>
+</div>
+<div class="col-12 header-bottom">
+<div class="main-menu section">
+<div class="container">
+<div id="navbarNavDropdown" class="navbar-collapse"><ul id="main-menu" class="navbar-nav ml-auto"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3542716" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3542716 nav-item"><a title="Racial Justice" href="/category/race-and-power-racial-justice/" class="nav-link" data-wpel-link="internal">Racial Justice</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3542717" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3542717 nav-item"><a title="Economic Justice" href="/category/economic-justice-democracy/" class="nav-link" data-wpel-link="internal">Economic Justice</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3544702" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3544702 nav-item"><a title="Climate Justice" href="/category/climate-justice/" class="nav-link" data-wpel-link="internal">Climate Justice</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3544703" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3544703 nav-item"><a title="Health Justice" href="/category/healthcare-justice/" class="nav-link" data-wpel-link="internal">Health Justice</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3542718" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-3542718 nav-item"><a title="Leadership" href="/category/leadership-management/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-3542718" data-wpel-link="internal">Leadership</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-3542718" role="menu">
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3539147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3539147 nav-item"><a title="Grassroots Fundraising Journal" href="https://nonprofitquarterly.org/grassroots-fundraising-journal/" class="dropdown-item" data-wpel-link="internal">Grassroots Fundraising Journal</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2925796" class="type-list no-link menu-item menu-item-type-custom menu-item-object-custom menu-item-2925796 nav-item"><a title="CONTENT TYPES" href="#" class="nav-link"><span class="module-title">CONTENT TYPES</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3543955" class="type-list color-white separator menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-3543955 nav-item"><a title="Podcasts" href="/category/podcasts/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-3543955" data-wpel-link="internal">Podcasts</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-3543955" role="menu">
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2926239" class="type-list color-white menu-item menu-item-type-post_type menu-item-object-page menu-item-2926239 nav-item"><a title="Tiny Spark" href="https://nonprofitquarterly.org/tiny-spark/" class="dropdown-item" data-wpel-link="internal">Tiny Spark</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3543956" class="type-list color-white menu-item menu-item-type-post_type menu-item-object-page menu-item-3543956 nav-item"><a title="Women of Color in Power" href="https://nonprofitquarterly.org/wocip/" class="dropdown-item" data-wpel-link="internal">Women of Color in Power</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2926234" class="type-list color-white menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-2926234 nav-item"><a title="Webinars" href="https://nonprofitquarterly.org/webinars/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-2926234" data-wpel-link="internal">Webinars</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-2926234" role="menu">
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2927239" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2927239 nav-item"><a title="Free Webinars" href="https://nonprofitquarterly.org/webinars/" class="dropdown-item" data-wpel-link="internal">Free Webinars</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3530803" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3530803 nav-item"><a title="Premium On-Demand Webinars" href="https://store.nonprofitquarterly.org/collections/on-demand" class="dropdown-item" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Premium On-Demand Webinars</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2926227" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2926227 nav-item"><a title="Membership" href="https://store.nonprofitquarterly.org/pages/membership-signup" class="nav-link" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Membership</a></li>
+</ul></div> </div>
+</div>
+<div class="header-search">
+<form method="get" id="searchform" class="search-form" action="https://nonprofitquarterly.org/" role="search">
+<input class="inputfield inputbox" id="s" name="s" type="text" placeholder="Search NPQ" value="">
+<button class="submit-btn" type="submit" id="searchsubmit" name="submit" value="Search">
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="content-container">
+<div class="wrapper" id="single-wrapper">
+<div class="container" id="content" tabindex="-1">
+<div class="post-section">
+<div class="row">
+<div class="col-md-8 title-area">
+<div class="container-pagination">
+</div>
+ <div class="post-title">
+<h1>How to Make Better Decisions Online</h1>
+<div class="user-desc">
+<div class="avatar-wrapper">
+</div>
+<div class="user-data">
+<h5><a href="https://nonprofitquarterly.org/author/josh-lerner/" title="Posts by Josh Lerner" class="author url fn" rel="author" data-wpel-link="internal">Josh Lerner</a> and <a href="https://nonprofitquarterly.org/author/rose-longhurst/" title="Posts by Rose Longhurst" class="author url fn" rel="author" data-wpel-link="internal">Rose Longhurst</a> </h5>
+<span>May 3, 2022</span>
+</div>
+</div>
+<div class="share-this csl-social-share">
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8 content-area" id="primary">
+<main class="site-main" id="main" style="margin-bottom: 25px;">
+<div class="post-content">
+<div class="post-content-inner">
+<article class="post-3546433 post type-post status-publish format-standard has-post-thumbnail hentry tag-infrastructure-development tag-nonprofit-leadership tag-organizational-management tag-ngos-and-civil-society tag-technology cluster_mapping-leadership-management" id="post-3546433">
+<div class="entry-content">
+<div class="swp_social_panel swp_horizontal_panel swp_flat_fresh  swp_default_full_color swp_other_full_color swp_individual_full_color scale-100 scale-full_width" data-min-width="1100" data-float-color="#ffffff" data-float="none" data-float-mobile="none" data-transition="slide" data-post-id="3546433"><div class="nc_tweetContainer swp_share_button swp_facebook" data-network="facebook"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_facebook_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_twitter" data-network="twitter"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://twitter.com/intent/tweet?text=How+to+Make+Better+Decisions+Online&amp;url=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F&amp;via=npquarterly" data-link="https://twitter.com/intent/tweet?text=How+to+Make+Better+Decisions+Online&amp;url=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F&amp;via=npquarterly" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_twitter_icon"></i><span class="swp_share">Tweet</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_linkedin" data-network="linkedin"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_linkedin_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_email" data-network="email"><a class="nc_tweet noPop swp_share_link" rel="nofollow noreferrer noopener" href="/cdn-cgi/l/email-protection#152a6660777f707661285d7a62302725617a30272558747e703027255770616170673027255170767c667c7a7b663027255a7b797c7b7033777a716c28543027257b7062302725627463703027257a73302725717c727c61747930272565797461737a67786630272576747b3027257d7079653027256c7a6030272578747e703027257170787a766774617c763027257170767c667c7a7b6630272574777a60613027257267747b616630275630272577607172706166302756302725747b71302725657a797c767c70663b3027255c61305027302d25302c2c66302725617c7870302725617a302725606572677471703027256c7a60673027257170767c667c7a7b3878747e7c7b723b3027253025513025543025513025544770747135587a6770355d7067702f353027257d616165663026543027533027537b7a7b65677a737c6164607467617067796c3b7a67723027537d7a6238617a3878747e7038777061617067387170767c667c7a7b66387a7b797c7b70302753" target="_blank"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_email_icon"></i><span class="swp_share">Email</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_print" data-network="print"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="#" data-link="#"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_print_icon"></i><span class="swp_share">Print</span></span></span></span></a></div></div><figure id="attachment_3546435" aria-describedby="caption-attachment-3546435" style="width: 1000px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-3546435 size-full" src="https://nonprofitquarterly.org/wp-content/uploads/2022/05/jon-tyson-qAZO-yes-graffiti-unsplash-1.jpg" alt="" width="1000" height="750" srcset="https://nonprofitquarterly.org/wp-content/uploads/2022/05/jon-tyson-qAZO-yes-graffiti-unsplash-1.jpg 1000w, https://nonprofitquarterly.org/wp-content/uploads/2022/05/jon-tyson-qAZO-yes-graffiti-unsplash-1-300x225.jpg 300w, https://nonprofitquarterly.org/wp-content/uploads/2022/05/jon-tyson-qAZO-yes-graffiti-unsplash-1-768x576.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /><figcaption id="caption-attachment-3546435" class="wp-caption-text">Image Credit: Jon Tyson on Unsplash</figcaption></figure>
+<p>Decision-making, like much of our lives, has moved online during the pandemic. At the same time, there are growing calls for funders, organizations, and institutions to make decision-making more inclusive and shift power to impacted communities. How can we make more democratic decisions online?</p>
+<p>A new wave of digital participation platforms can help. Platforms such as <a href="https://decidim.org/" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">Decidim</a>, <a href="https://www.citizenlab.co/" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">Citizen Lab</a>, and <a href="https://citizens.is/" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">Your Priorities</a> can effectively engage communities throughout the process of making budget, policy, and funding decisions. They can make engagement easier, more transparent, and more accessible. Thousands of government institutions are already using digital participation platforms. It’s time for nonprofits and foundations to upgrade our digital decision-making tools.</p>
+<p>Individually and through our organizations, we have surveyed, tested, and evaluated these new platforms. We each have experience running participatory grantmaking and decision-making processes online using different platforms. At Open Society Foundations, we are interested in the potential for digital tools to encourage meaningful participation, and as such we supported the establishment of FundAction, a digital fund and platform in Europe. At People Powered, we recently <a href="https://www.peoplepowered.org/digital-participation-platforms" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">reviewed and rated the best digital participation platforms</a>, and we have used them to engage our global members in making funding and policy decisions.</p>
+<p>The results are promising but not perfect. Digital participation platforms can help you make better decisions online, but they can also reinforce inequities and take up excessive time and resources. Below, we explain why you should consider using the platforms, what to watch out for, and what you need to know before you start.</p>
+<h3><strong>You Can Make Good Decisions Online</strong></h3>
+<p>First, the good news. Digital participation platforms can enable people to learn, debate, and decide together in more inclusive ways. They generally have several core functions that work well: collecting, reviewing, and revising ideas and proposals; voting on proposals; and reporting outcomes. Along the way, people can receive updates, give feedback, share information beyond the platforms, and integrate offline and online discussions. Advanced platform features are increasingly using artificial intelligence, algorithms, and randomization to connect people and ideas in new ways.</p><div class="ad-block-wider top-margin" style="margin: 15px 0;"><div id='div-gpt-ad-1568391674167-0'> <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="1843ac42367c0d85701936f0-text/javascript">     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1568391674167-0'); });   </script> </div></div>
+<p>These platforms can make it easier to reach more informed decisions that have broader support. They make engagement easier by automating and distributing work— by collecting ideas, for example, and compiling votes. They make decision-making more transparent by documenting and sharing key information and discussions online, in usable formats. And they make participation more accessible by creating easier opportunities for people to engage at times and in places and languages that work for them.</p>
+<p>At <a href="https://fundaction.eu/" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">FundAction</a>, a European community of activists has used one such platform to make decisions about funding priorities and grants. FundAction is a participatory fund that aims “to shift power to make decisions about funding from foundations to those closer to the issue, strengthen collaboration and mutual support among European activists, and build the capacity of activists and the social movements they work with.” The community is spread across many countries in different time zones, so people need to engage asynchronously at times most convenient for them.</p>
+<p>The platform that FundAction uses has made it easier for activists to share their work with people outside their thematic or geographic community, which has helped build solidarity and buttressed political education. For example, disability justice activists shared links to their proposed <a href="https://www.thesocialcreatures.org/thecreaturetimes/the-social-model-of-disability" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">social model of disability</a> on the platform, making it easier for peers and reviewers to learn about the concept and ask questions. The questions and responses are shared transparently with all, saving the activists time as they do not have to repeatedly address the same points. This open format also serves as a reminder that all of us have questions, as well as solutions, to contribute.</p>
+<p><a href="https://www.peoplepowered.org/" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">People Powered</a> has used a platform to allocate funds at a global level—and also to decide new organizational policies. People Powered is a global hub for participatory democracy that aims “to expand people’s power to make government decisions.” Its community of members from over 35 countries provides direct support for programs such as participatory budgeting and citizens’ assemblies. Members have used the platform to propose and debate funding allocations and policies and then vote to allocate funds to new projects (e.g., mentorship, trainings and a digital participation platform guide and ratings) and approve new policies (e.g., for membership, board elections, inclusion, and accessibility).</p>
+<p>The digital participation platform has provided People Powered with long-term infrastructure for countless meetings and discussions. While video calls and WhatsApp exchanges are often the most inclusive spaces for global member discussions, the platform has served as a central place to collect ideas and feedback. The site’s translation services have made these discussions more easily accessible to our members, most of whom do not speak English as a native language. The platform has also enabled clear and transparent voting, reporting of vote results, and subsequent project implementation.<strong> </strong></p>
+<h3><strong>Technology Isn’t a Short-Cut to Equity</strong></h3>
+<p>The transparency and “flatness” of digital tools, however, can be mistaken for fairness. The technologies may treat everyone equally, such as allocating the same number of votes in preference polls or randomized participant selection, but this may deepen inequities. Access to a decent internet connection, familiarity with platform navigation, and comfort with online discussions vary. Providing the same information and opportunities to everyone simultaneously may seem fair, but it does not necessarily deliver equitable results.</p>
+<p>Platform developers and supporters often encourage maximum transparency, but this can result in information overloads that undermine inclusion. Platforms strive to be the ultimate tool for all your participation needs, but some needs are better met by other means.</p><div class="subscribe-section">
+<div class="signup-form-block">
+<h4>Sign up for our free newsletter</h4>
+<p>Subscribe to the <i style="font-style: italic;">NPQ</i> newsletter to have our top stories delivered directly to your inbox.</p>
+<div class="privy-embed-form" data-campaign="2899395"></div>
+<p class="form-subtext">By signing up, you agree to our privacy policy and terms of use, and to receive messages from NPQ and our partners.</p>
+</div>
+</div>
+<p>For example, People Powered was advised to create event pages on its platform for every group call and to post the call discussions and outcomes on these pages. After sinking hours into this work, staff decided not to bother. The most important outcomes—project ideas—were already collected elsewhere on the platform, and staff could do more for transparency by reaching out individually to less active members than by spending hours creating additional pages that only the most active users would see. If so much is shared that people feel too overwhelmed to open the platform and review updates, then you’re not cultivating transparency—you’re creating fatigue.</p>
+<p>Likewise, equal opportunities to participate do not necessarily result in equal (let alone equitable) participation and indeed may still lead to certain people having disproportionate power. A more sophisticated approach looks at outcomes and then iterates. If only certain groups are participating, then we are failing in our ambition to achieve equity.</p>
+<p>For example, an algorithm that randomly generated a group of decision-makers at FundAction resulted in four of the six on the panel being Serbian. There are two measures needed to correct this. Most simply, adapt the algorithm to account for geographical diversity. But the more complex—and necessary—solution is to understand whether and why Serbians are over-represented in the community—and take steps to address that. This work needs to happen through direct communication and organizing, beyond the constraints of a platform.</p>
+<p>Technology is not neutral, and we need to compensate for its biases. This requires extra outreach and discussions with people who face digital barriers, extra time to allow people with less connectivity to participate, and active moderation and language support. Sometimes this means going against the tech-first recommendations of developers and limiting online participation to make more space for human discussions outside of the platform.</p>
+<h3><strong>Expect to Iterate</strong></h3>
+<p>Relatively young, these technologies are still works in progress. While their core functionalities are well developed, new features are constantly being added and tested. If you use new features, you can expect to encounter some surprises. Sometimes these are glitches that may be easily fixed, for example when a platform sends out automated announcements to users. In other cases, these are software limitations that you need to work around.</p>
+<p>While it can be frustrating to learn and adapt, this experimentation and flexibility is healthy. Good decision-making processes should be iterative, and online platforms allow for customization as you go. You can quickly change how you engage based on feedback. This flexibility is especially helpful now, as COVID restrictions, economic conditions, and workplace practices are constantly shifting.</p>
+<p>At FundAction, one area of constant iteration is how to classify work, identities, and communities in ways that help organize the work while also respecting the political struggles around categorization. To ensure that we’re funding a diversity of issue areas, we ask people to tag their work as “housing justice,” “racial justice,” or “digital rights.” But while an ever-expanding list may offer a fuller picture, it will never be exhaustive. Allowing people to claim multiple tags may be a nod to the intersectional nature of their work, but it also adds to complexity and limits the platform’s functionality. We will never tell our full stories in a series of tick-boxes, and each time we try, we discover new challenges. But once this messiness has been acknowledged, we can move closer to technology that supports our work and human dignity.</p>
+<h3><strong>There Are (Too) Many Options</strong></h3>
+<p>Configuring a platform is not the only complex challenge—first, you have to select the right platform. There are dozens of digital participation platforms trying to do similar things. You may be overwhelmed by the options. While the promotional materials all sound impressive, don’t believe everything you read. In a young and oversaturated market, developers often make claims that their products don’t back up.</p>
+<p>The good news from this competitive marketplace is that you can often get developers to address your needs. If you need a particular feature or functionality, let developers know. This feedback will also help improve the quality of the tools, so they better address user needs.</p>
+<p>One of the most promising things about the platforms are their constantly expanding range of features and functionalities. You can connect like-minded proposals using algorithms, enable diverse voting methods, and set up public reporting and monitoring dashboards. These features and new ones can be tailored to your needs.</p>
+<p>Many of these features are still raw. You can view content in different languages, but only with many clicks. You can create a dashboard, but you may not be able to display the exact data you want. You can send mass messages to users, but you can’t fully control what the messages say. But all of these are solvable problems. The more people use the platforms, and the more funders invest in them, the better they become.</p>
+<p>So, are you ready to upgrade your online decision-making? Or do you work with communities that are struggling to shift from in-person engagement to hybrid or online spaces? If so, review the <a href="https://www.peoplepowered.org/digital-participation-platforms" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">platform ratings and guide</a> and pick an option with a strong track record that fits your needs and budget. Set up the features that you need, watch out for over-reliance on technical solutions, and iterate as you go. And don’t forget to share what you learn to help us all to make better decisions.</p>
+</p><div class="swp_social_panel swp_horizontal_panel swp_flat_fresh  swp_default_full_color swp_other_full_color swp_individual_full_color scale-100 scale-full_width" data-min-width="1100" data-float-color="#ffffff" data-float="none" data-float-mobile="none" data-transition="slide" data-post-id="3546433"><div class="nc_tweetContainer swp_share_button swp_facebook" data-network="facebook"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_facebook_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_twitter" data-network="twitter"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://twitter.com/intent/tweet?text=How+to+Make+Better+Decisions+Online&amp;url=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F&amp;via=npquarterly" data-link="https://twitter.com/intent/tweet?text=How+to+Make+Better+Decisions+Online&amp;url=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F&amp;via=npquarterly" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_twitter_icon"></i><span class="swp_share">Tweet</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_linkedin" data-network="linkedin"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener external" target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fnonprofitquarterly.org%2Fhow-to-make-better-decisions-online%2F" data-wpel-link="external"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_linkedin_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_email" data-network="email"><a class="nc_tweet noPop swp_share_link" rel="nofollow noreferrer noopener" href="/cdn-cgi/l/email-protection#99a6eaecfbf3fcfaeda4d1f6eebcaba9edf6bcaba9d4f8f2fcbcaba9dbfcededfcebbcaba9ddfcfaf0eaf0f6f7eabcaba9d6f7f5f0f7fcbffbf6fde0a4d8bcaba9f7fceebcaba9eef8effcbcaba9f6ffbcaba9fdf0fef0edf8f5bcaba9e9f5f8edfff6ebf4eabcaba9faf8f7bcaba9f1fcf5e9bcaba9e0f6ecbcaba9f4f8f2fcbcaba9fdfcf4f6faebf8edf0fabcaba9fdfcfaf0eaf0f6f7eabcaba9f8fbf6ecedbcaba9feebf8f7edeabcabdabcaba9fbecfdfefcedeabcabdabcaba9f8f7fdbcaba9e9f6f5f0faf0fceab7bcaba9d0edbcdcabbca1a9bca0a0eabcaba9edf0f4fcbcaba9edf6bcaba9ece9feebf8fdfcbcaba9e0f6ecebbcaba9fdfcfaf0eaf0f6f7b4f4f8f2f0f7feb7bcaba9bca9ddbca9d8bca9ddbca9d8cbfcf8fdb9d4f6ebfcb9d1fcebfca3b9bcaba9f1edede9eabcaad8bcabdfbcabdff7f6f7e9ebf6fff0ede8ecf8ebedfcebf5e0b7f6ebfebcabdff1f6eeb4edf6b4f4f8f2fcb4fbfcededfcebb4fdfcfaf0eaf0f6f7eab4f6f7f5f0f7fcbcabdf" target="_blank"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_email_icon"></i><span class="swp_share">Email</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_print" data-network="print"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="#" data-link="#"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_print_icon"></i><span class="swp_share">Print</span></span></span></span></a></div></div><div class="swp-content-locator"></div>
+</div>
+<footer class="entry-footer">
+
+</footer>
+</article>
+</div>
+</div>
+<div class="author-section">
+<h6 class="module-title" style="color: black;">ABOUT THE AUTHORS</h6>
+<div class="author-data">
+<div class="author-details">
+<div class="avatar-wrapper">
+<img alt='' src='https://nonprofitquarterly.org/wp-content/uploads/2021/02/josh-lerner.jpg' srcset='https://nonprofitquarterly.org/wp-content/uploads/2021/02/josh-lerner.jpg 2x' class='avatar avatar-70 photo avatar-default' height='70' width='70' loading='lazy' /> </div>
+<ul class="list-unstyled">
+<li><a target="_blank" href="https://twitter.com/joshalerner" data-wpel-link="external" rel="external noopener noreferrer">
+<i class="fa fa-twitter" aria-hidden="true"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="author-desc">
+<span class="author-name"><a href="https://nonprofitquarterly.org/author/josh-lerner/" title="Posts by Josh Lerner" class="author url fn" rel="author" data-wpel-link="internal">Josh Lerner</a></span>
+<p>Josh Lerner is the Executive Director of People Powered: Global Hub for Participatory Democracy. He has 20 years of experience developing, researching, and working with leading community engagement programs across North America, Latin America, and Europe. He was previously co-founder and Co-Executive Director of the Participatory Budgeting Project, a nonprofit organization that empowers people to decide together how to spend public money.</p>
+</div>
+</div>
+<div class="author-data">
+<div class="author-details">
+<div class="avatar-wrapper">
+<img alt='' src='https://nonprofitquarterly.org/wp-content/uploads/2022/05/RoseLonghurst.jpg' srcset='https://nonprofitquarterly.org/wp-content/uploads/2022/05/RoseLonghurst.jpg 2x' class='avatar avatar-70 photo avatar-default' height='70' width='70' loading='lazy' /> </div>
+</div>
+<div class="author-desc">
+<span class="author-name"><a href="https://nonprofitquarterly.org/author/rose-longhurst/" title="Posts by Rose Longhurst" class="author url fn" rel="author" data-wpel-link="internal">Rose Longhurst</a></span>
+<p>Rose Longhurst is a Senior Programme Officer in the Europe and Eurasia Programme of the Open Society Foundations, focusing on democratic innovation. Since 2013, she has been part of the Edge Fund, a UK-based foundation that gives grants to grassroots activists challenging the root causes of injustice. She was one of the co-founders of FundAction, which supports activism across Europe.</p>
+</div>
+</div>
+<div class="tags">
+<span>More about: </span>
+<a href="https://nonprofitquarterly.org/tag/infrastructure-development/" data-wpel-link="internal">Infrastructure</a><a href="https://nonprofitquarterly.org/tag/nonprofit-leadership/" data-wpel-link="internal">Leadership</a><a href="https://nonprofitquarterly.org/tag/organizational-management/" data-wpel-link="internal">Management</a><a href="https://nonprofitquarterly.org/tag/ngos-and-civil-society/" data-wpel-link="internal">NGOs</a><a href="https://nonprofitquarterly.org/tag/technology/" data-wpel-link="internal">Technology</a> </div>
+</div>
+<div>
+<div class="become-a-member-block">
+<h4 class="block-title">Become a member</h4>
+<div class="become-a-member-text">
+<p>Support independent journalism and knowledge creation for civil society. Become a member of Nonprofit Quarterly.</p>
+<p>Members receive unlimited access to our archived and upcoming digital content. NPQ is the leading journal in the nonprofit sector written by social change experts.
+Gain access to our exclusive library of online courses led by thought leaders and educators providing contextualized information to help nonprofit practitioners
+make sense of changing conditions and improve infra-structure in their organizations.</p>
+</div>
+<div class="block-bottom-section">
+<div class="row">
+<div class="col-md-5">
+<a href="https://store.nonprofitquarterly.org/pages/membership-signup?utm_source=nonprofitquarterly.org&amp;utm_medium=referral&amp;utm_campaign=NPQ%20Home%20Page" class="become-a-member-button" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Join Today</a>
+</div>
+<div class="col-md-7">
+<div class="cc-container">
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/visa_icon.png" alt="logo" /></a>
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/mastercard_icon.png" alt="logo" /></a>
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/amex_icon.png" alt="logo" /></a>
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/discover_icon.png" alt="logo" /></a>
+<img src="https://nonprofitquarterly.org/wp-content/themes/npq-new-site/images/paypal_icon.png" alt="logo" /></a>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+<div class="comments-area">
+<div class="comment-toggler">
+<div id="comment-toggler" class="comment-toggler-btn">
+<i class="fa fa-comment-o" aria-hidden="true"></i>
+<span>See comments</span>
+</div>
+</div>
+</div>
+<div id="disqus_thread"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="1843ac42367c0d85701936f0-text/javascript">
+        DISQUS.reset({
+		  reload: true,
+		  config: function () {  
+		    this.page.identifier = "npquarterly-3546433";  
+		    this.page.url = "https://nonprofitquarterly.org/how-to-make-better-decisions-online/";
+		  }
+		});
+    </script>
+<br><div class="ad-block-wider top-margin" style="margin: 15px 0;"><div id='div-gpt-ad-1569874959269-0'> <script type="1843ac42367c0d85701936f0-text/javascript">     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1569874959269-0'); });   </script> </div></div> </main>
+</div>
+<div class="col-md-4 widget-area" id="right-sidebar" role="complementary">
+<div class="sidebar-widgets">
+<div> <div class="textwidget"><p></p>
+<div class="">
+<div class="">
+<div class="">
+<div class="">
+<div class="">
+<div class="">
+<div class="">
+<div class="">
+<div class="WordSection1">
+<div class=""></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><a href="https://npqmag.xsubscribe.com/subscribe/ref=sidebar-spring22" data-wpel-link="external" target="_blank" rel="external noopener noreferrer"><img loading="lazy" class="alignnone wp-image-3545928 size-full" src="https://nonprofitquarterly.org/wp-content/uploads/2022/03/Sidebar.jpg" alt="NPQ_Spring_2022" width="784" height="936" srcset="https://nonprofitquarterly.org/wp-content/uploads/2022/03/Sidebar.jpg 784w, https://nonprofitquarterly.org/wp-content/uploads/2022/03/Sidebar-251x300.jpg 251w, https://nonprofitquarterly.org/wp-content/uploads/2022/03/Sidebar-768x917.jpg 768w" sizes="(max-width: 784px) 100vw, 784px" /></a></p>
+</div>
+</div> </div>
+<div class="">
+</div>
+<div class="sidebar-posts posts">
+<h6 class="module-title">You might also like</h6>
+<div class="list-outer">
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/05/merry-300x225.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/what-is-the-nonprofit-sector-of-a-future-equitable-world/" data-wpel-link="internal">What Is the Nonprofit Sector of a Future, Equitable World?</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/devon-kearney/" title="Posts by Devon Kearney" class="author url fn" rel="author" data-wpel-link="internal">Devon Kearney</a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/05/ohdear-crop-300x225.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/what-it-looks-like-to-build-a-pro-black-organization/" data-wpel-link="internal">What It Looks Like to Build a Pro-Black Organization</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/liz-derias-tyehimba/" title="Posts by Liz Derias" class="author url fn" rel="author" data-wpel-link="internal">Liz Derias</a> and <a href="https://nonprofitquarterly.org/author/kad-smith/" title="Posts by Kad Smith" class="author url fn" rel="author" data-wpel-link="internal">Kad Smith</a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/04/tim-mossholder-sxb8StmTfaw-unsplash_1-300x200.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/riding-the-wave-cooperative-conversion-and-the-silver-tsunami/" data-wpel-link="internal">Riding the Wave: Cooperative Conversion and the Silver Tsunami</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/kateri-gutierrez/" title="Posts by Kateri Gutierrez" class="author url fn" rel="author" data-wpel-link="internal">Kateri Gutierrez</a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/04/New_Era-300x204.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/resistance-and-radical-love-the-call-forward-of-a-pro-black-sector/" data-wpel-link="internal">Resistance and Radical Love: The Call-Forward of a Pro-Black Sector</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/dax-devlon-ross/" title="Posts by Dax-Devlon Ross" class="author url fn" rel="author" data-wpel-link="internal">Dax-Devlon Ross</a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/04/DefiningProBlack-300x225.jpg" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/defining-pro-black/" data-wpel-link="internal">Defining <em>Pro-Black</em></a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/cyndi/" title="Posts by Cyndi Suarez" class="author url fn" rel="author" data-wpel-link="internal">Cyndi Suarez</a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="grid-item">
+<div class="grid-content">
+<div class="article-thumbnail">
+<div class="image-wrap"><img src="https://nonprofitquarterly.org/wp-content/uploads/2022/04/WebsiteThumbnail-2-300x225.png" alt="">
+</div>
+</div>
+<div class="article-content">
+<h6><a href="https://nonprofitquarterly.org/remaking-the-economy-how-to-design-democratic-management/" data-wpel-link="internal">Remaking the Economy: How to Design Democratic Management</a></h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/sdubb/" title="Posts by Steve Dubb" class="author url fn" rel="author" data-wpel-link="internal">Steve Dubb</a>, <a href="https://nonprofitquarterly.org/author/nicole-koch/" title="Posts by Nicole Koch" class="author url fn" rel="author" data-wpel-link="internal">Nicole Koch</a>, <a href="https://nonprofitquarterly.org/author/yarissa-soriano/" title="Posts by Yarissa Soriano" class="author url fn" rel="author" data-wpel-link="internal">Yarissa Soriano</a> and <a href="https://nonprofitquarterly.org/author/anj-talley/" title="Posts by Anj Talley" class="author url fn" rel="author" data-wpel-link="internal">Anj Talley</a></div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="sticky-sidebar">
+<div class="sidebar-widget webinars">
+<div> <div class="webinars-widget">
+<h2 class="title"> Upcoming Webinars </h2>
+<div class="content">
+<div class="webinar__card">
+<div class="webinar__card-type">
+<div class="webinar__card-type--block">
+<div class="card-image">
+<a href="https://store.nonprofitquarterly.org/products/mastering-quickbooks-2022-the-how-to-clinic-for-nonprofit-bookkeepers-for-online-quickbooks-users" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
+<img src="https://nonprofitquarterly.org/wp-content/uploads/2022/04/SocialPromoTW-2.png" />
+</a>
+</div>
+</div>
+</div>
+<div class="webinar__card-body">
+<div class="webinar__card-body--date">May 11 & 12, 2 pm ET</div>
+<div class="webinar__card-body--content">
+<p class="series-name">Mastering QuickBooks 2022</p>
+<div class="webinar-title">
+<p>The How-to Clinic for Nonprofit Bookkeepers for Online QuickBooks Users</p>
+</div>
+</div>
+<a class="webinar-button" href="https://store.nonprofitquarterly.org/products/mastering-quickbooks-2022-the-how-to-clinic-for-nonprofit-bookkeepers-for-online-quickbooks-users" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Register</a>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+<div class="ad-block" style="margin-bottom:5px;"><div id="div-gpt-ad-1501526414099-4"><script type="1843ac42367c0d85701936f0-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1501526414099-4'); });</script></div></div><div class="ad-block" style="margin-bottom:5px;"><div id="div-gpt-ad-1569874932810-0"><script type="1843ac42367c0d85701936f0-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1569874932810-0'); });</script></div></div> <div class="ad-block" style="margin-bottom:5px;"><div id="div-gpt-ad-1569875248555-0"><script type="1843ac42367c0d85701936f0-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1569875248555-0'); });</script></div></div> </div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="author-list-section">
+<h6 class="module-title">You might also like</h6>
+<div class="row">
+<div class="col-md-4">
+<article class="grid-item">
+<div class="grid-image">
+<div class="premium-buttons related-posts">
+</div>
+<div class="image-wrap">
+<img width="1000" height="750" src="https://nonprofitquarterly.org/wp-content/uploads/2022/05/merry.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://nonprofitquarterly.org/wp-content/uploads/2022/05/merry.jpg 1000w, https://nonprofitquarterly.org/wp-content/uploads/2022/05/merry-300x225.jpg 300w, https://nonprofitquarterly.org/wp-content/uploads/2022/05/merry-768x576.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /> </div>
+ </div>
+<div class="grid-content eq-height">
+<h6>
+<a href="https://nonprofitquarterly.org/what-is-the-nonprofit-sector-of-a-future-equitable-world/" data-wpel-link="internal">
+What Is the Nonprofit Sector of a Future, Equitable World? </a>
+</h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/devon-kearney/" title="Posts by Devon Kearney" class="author url fn" rel="author" data-wpel-link="internal">Devon Kearney</a></div>
+</div>
+</div>
+</article>
+</div>
+<div class="col-md-4">
+<article class="grid-item">
+<div class="grid-image">
+<div class="premium-buttons related-posts">
+</div>
+<div class="image-wrap">
+<img width="1000" height="750" src="https://nonprofitquarterly.org/wp-content/uploads/2022/05/ohdear-crop.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://nonprofitquarterly.org/wp-content/uploads/2022/05/ohdear-crop.jpg 1000w, https://nonprofitquarterly.org/wp-content/uploads/2022/05/ohdear-crop-300x225.jpg 300w, https://nonprofitquarterly.org/wp-content/uploads/2022/05/ohdear-crop-768x576.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /> </div>
+</div>
+<div class="grid-content eq-height">
+<h6>
+<a href="https://nonprofitquarterly.org/what-it-looks-like-to-build-a-pro-black-organization/" data-wpel-link="internal">
+What It Looks Like to Build a Pro-Black Organization </a>
+</h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/liz-derias-tyehimba/" title="Posts by Liz Derias" class="author url fn" rel="author" data-wpel-link="internal">Liz Derias</a> and <a href="https://nonprofitquarterly.org/author/kad-smith/" title="Posts by Kad Smith" class="author url fn" rel="author" data-wpel-link="internal">Kad Smith</a></div>
+</div>
+</div>
+</article>
+</div>
+ <div class="col-md-4">
+<article class="grid-item">
+<div class="grid-image">
+<div class="premium-buttons related-posts">
+</div>
+<div class="image-wrap">
+<img width="1000" height="667" src="https://nonprofitquarterly.org/wp-content/uploads/2022/04/tim-mossholder-sxb8StmTfaw-unsplash_1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://nonprofitquarterly.org/wp-content/uploads/2022/04/tim-mossholder-sxb8StmTfaw-unsplash_1.jpg 1000w, https://nonprofitquarterly.org/wp-content/uploads/2022/04/tim-mossholder-sxb8StmTfaw-unsplash_1-300x200.jpg 300w, https://nonprofitquarterly.org/wp-content/uploads/2022/04/tim-mossholder-sxb8StmTfaw-unsplash_1-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /> </div>
+</div>
+<div class="grid-content eq-height">
+<h6>
+<a href="https://nonprofitquarterly.org/riding-the-wave-cooperative-conversion-and-the-silver-tsunami/" data-wpel-link="internal">
+Riding the Wave: Cooperative Conversion and the Silver... </a>
+</h6>
+<div class="post-details">
+<div class="author"><a href="https://nonprofitquarterly.org/author/kateri-gutierrez/" title="Posts by Kateri Gutierrez" class="author url fn" rel="author" data-wpel-link="internal">Kateri Gutierrez</a></div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-section post equity-section">
+<div class="container">
+<div class="content-inner bottom-content">
+<h6 class="module-title">WOMEN OF COLOR IN POWER</h6>
+<div class="row">
+<div class="col-md-4">
+<div class="card podcast-block">
+<div class="top">
+<div class="image">
+<img src="/wp-content/uploads/2021/09/WOCIP_Logo.jpeg" alt="">
+</div>
+<div class="card-content">
+<h5 class="card-title">Women of Color in Power</h5>
+<p class="card-text">Listen wherever you get your podcasts.</p>
+</div>
+</div>
+<div class="card-action">
+<a href="/wocip/" class="btn btn-primary" data-wpel-link="internal">Subscribe</a>
+</div>
+</div>
+ </div>
+<div class="col-md-4">
+<article class="grid-item">
+<div class="grid-image">
+<a href="https://nonprofitquarterly.org/rep-ayanna-pressley-and-authentic-leadership/" data-wpel-link="internal">
+<div class="image-wrap imgLiquid_bgSize imgLiquid_ready" style="background-image: url('https://nonprofitquarterly.org/wp-content/uploads/2021/10/AP_nocutoff-1-470x304.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+<img src="https://nonprofitquarterly.org/wp-content/uploads/2021/10/AP_nocutoff-1.jpg" alt="" style="display: none;">
+</div>
+</a>
+</div>
+<div class="grid-content">
+<h6><a href="https://nonprofitquarterly.org/rep-ayanna-pressley-and-authentic-leadership/" data-wpel-link="internal">
+Rep. Ayanna Pressley and Authentic Leadership </a>
+</h6>
+</div>
+</article>
+</div>
+<div class="col-md-4">
+<article class="grid-item">
+<div class="grid-image">
+<a href="https://nonprofitquarterly.org/reclaiming-interrupted-lineages/" data-wpel-link="internal">
+<div class="image-wrap imgLiquid_bgSize imgLiquid_ready" style="background-image: url('https://nonprofitquarterly.org/wp-content/uploads/2021/05/luana-morales-wide-470x304.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+<img src="https://nonprofitquarterly.org/wp-content/uploads/2021/05/luana-morales-wide.jpg" alt="" style="display: none;">
+</div>
+</a>
+</div>
+<div class="grid-content">
+<h6><a href="https://nonprofitquarterly.org/reclaiming-interrupted-lineages/" data-wpel-link="internal">
+Reclaiming Interrupted Lineages </a>
+</h6>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer-container">
+<div class="footer-top">
+<div class="container">
+<div class="row topblock d-flex align-items-center" style="justify-content: space-around;">
+<div class="col-md7">
+<div class="signup-form">
+<h4>Like what you see?</h4>
+<p>Subscribe to the <i style="font-style: italic;">NPQ</i> newsletter to have our top stories delivered directly to your inbox.</p>
+<div class="privy-embed-form" data-campaign="2899395"></div>
+<p class="form-subtext">By signing up, you agree to our privacy policy and terms of use, and to receive messages from NPQ and our partners.</p>
+</div> </div>
+<div class="col-md5">
+<div class="footer-subscribe-wrapper">
+<div class="footer-subscribe-section">
+<div><div class="textwidget custom-html-widget"><img src="https://nonprofitquarterly.org/wp-content/uploads/2021/10/Screen-Shot-2021-10-26-at-10.48.37-AM.png" /></div></div> <div class="footer-subscribe-section__text">
+<h4>Independent & in your mailbox.</h4>
+<p>Subscribe today and get a full year of NPQ for just $59.</p>
+<a href="https://npqmag.xsubscribe.com/subscribe/" class="button subscribe" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">subscribe</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row bottomblock">
+<div class="col-lg-4 col-md-3">
+</div>
+<div class="col-lg-8 col-md-9">
+<div class="menu-links">
+<div class="menu-footer-menu-container"><ul id="footer-menu" class="menu"><li id="menu-item-3527102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3527102"><a href="https://nonprofitquarterly.org/about-us/" data-wpel-link="internal">About</a></li>
+<li id="menu-item-2925502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2925502"><a href="https://nonprofitquarterly.org/customer-support/" data-wpel-link="internal">Contact</a></li>
+<li id="menu-item-3544055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3544055"><a href="https://nonprofitquarterly.org/submissions/" data-wpel-link="internal">Submissions</a></li>
+<li id="menu-item-2925503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2925503"><a href="https://nonprofitquarterly.org/nonprofit-advertising/" data-wpel-link="internal">Advertisers</a></li>
+<li id="menu-item-3524247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3524247"><a href="https://nonprofitquarterly.org/newsletters/" data-wpel-link="internal">Newsletters</a></li>
+<li id="menu-item-2925515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2925515"><a href="https://nonprofitquarterly.org/copyright-policy/" data-wpel-link="internal">Copyright</a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="webinar-popup-bk modal fade" id="webinarModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="container">
+<div class="webinar-popup">
+<div class="modal-dialog" role="document">
+<h3>
+Subscribe to View Webinars
+</h3>
+<script charset="utf-8" type="1843ac42367c0d85701936f0-text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script type="1843ac42367c0d85701936f0-text/javascript">
+hbspt.forms.create({
+portalId: "407546",
+formId: "66b0a3e1-a405-44ad-8168-a5e6a8125b46"
+});
+</script> </div>
+</div>
+</div>
+</div>
+<div class="audio-player-container">
+</div>
+<script type="1843ac42367c0d85701936f0-text/javascript">
+  if (document.getElementById('disqus_thread')) {
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://npquarterly.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+</script>
+<script type="1843ac42367c0d85701936f0-text/javascript" id='monsterinsights-frontend-script-js-extra'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/nonprofitquarterly.org","hash_tracking":"false","ua":"UA-4988227-2","v4_id":""};
+/* ]]> */
+</script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/google-analytics-premium/assets/js/frontend-gtag.min.js?ver=8.3.0' id='monsterinsights-frontend-script-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" id='disqus_count-js-extra'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"npquarterly"};
+/* ]]> */
+</script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.22' id='disqus_count-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" id='disqus_embed-js-extra'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.22"},"disqusIdentifier":"3546433 https:\/\/nonprofitquarterly.org\/?p=3546433","disqusShortname":"npquarterly","disqusTitle":"How to Make Better Decisions Online","disqusUrl":"https:\/\/nonprofitquarterly.org\/how-to-make-better-decisions-online\/","postId":"3546433"};
+/* ]]> */
+</script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/disqus-comment-system/public/js/comment_embed.js?ver=3.0.22' id='disqus_embed-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://code.jquery.com/jquery-1.12.4.min.js?ver=1.12.4' id='jquery-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" id='social_warfare_script-js-extra'>
+/* <![CDATA[ */
+var socialWarfare = {"addons":["pro"],"post_id":"3546433","variables":{"emphasizeIcons":"0","powered_by_toggle":false,"affiliate_link":"https:\/\/warfareplugins.com"},"floatBeforeContent":""};
+/* ]]> */
+</script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/social-warfare/assets/js/script.min.js?ver=4.3.0' id='social_warfare_script-js'></script>
+<script type='application/json' id='wpp-json'>
+{"sampling_active":0,"sampling_rate":100,"ajax_url":"https:\/\/nonprofitquarterly.org\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","api_url":"https:\/\/nonprofitquarterly.org\/wp-json\/wordpress-popular-posts","ID":3546433,"token":"d19e3c417b","lang":0,"debug":0}
+</script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=5.5.1' id='wpp-js-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/ofi.min.js?ver=3.2.3' id='ofi-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery-ui.min.js?ver=1.14.0' id='jquery-ui-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/matchHeight.js?ver=1.2.0' id='match-height-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/imgLiquid-min.js?ver=1.2.0' id='img-liquid-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/slick.min.js?ver=1.2.0' id='slick-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.selectBox.js?ver=1.2.0' id='selectBox-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.modal.js?ver=1.2.3' id='jquery-modal-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='//cdn.jsdelivr.net/npm/sweetalert2@8?ver=1.2.0' id='sweetalert2-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/chosen.jquery.min.js?ver=1.8.7' id='chosen-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.mousewheel.min.js?ver=1.2.0' id='jquery-mousewheel-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.touchSwipe.min.js?ver=1.2.0' id='jquery-touchswipe-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.cookie.js?ver=0.8.8.1652568841' id='jquery-cookie-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/jquery.nicescroll.min.js?ver=3.7.6' id='jquery-nicescroll-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/vendor/audio7_html5.js?ver=1.9.2' id='audio7-html5-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/theme.min.js?ver=0.8.8.1652568841-2' id='understrap-scripts-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" id='main-js-js-extra'>
+/* <![CDATA[ */
+var site_info = {"ajax_url":"https:\/\/nonprofitquarterly.org\/wp-admin\/admin-ajax.php","root_url":"https:\/\/nonprofitquarterly.org"};
+/* ]]> */
+</script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/themes/npq-new-site/js/main.js?ver=0.8.8.1652568841' id='main-js-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-includes/js/comment-reply.min.js?ver=5.8.3' id='comment-reply-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" id='moove_gdpr_frontend-js-extra'>
+/* <![CDATA[ */
+var moove_frontend_gdpr_scripts = {"ajaxurl":"https:\/\/nonprofitquarterly.org\/wp-admin\/admin-ajax.php","post_id":"3546433","plugin_dir":"https:\/\/nonprofitquarterly.org\/wp-content\/plugins\/gdpr-cookie-compliance","show_icons":"all","is_page":"","strict_init":"1","enabled_default":{"third_party":0,"advanced":0},"geo_location":"false","force_reload":"false","is_single":"1","hide_save_btn":"false","current_user":"0","cookie_expiration":"365","script_delay":"2000","gdpr_scor":"true","wp_lang":""};
+/* ]]> */
+</script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-content/plugins/gdpr-cookie-compliance/dist/scripts/main.js?ver=4.7.2' id='moove_gdpr_frontend-js'></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src='https://nonprofitquarterly.org/wp-includes/js/wp-embed.min.js?ver=5.8.3' id='wp-embed-js'></script>
+<aside id="moove_gdpr_cookie_info_bar" class="moove-gdpr-info-bar-hidden moove-gdpr-align-center moove-gdpr-dark-scheme gdpr_infobar_postion_bottom" role="note" aria-label="GDPR Cookie Banner" style="display: none;">
+<div class="moove-gdpr-info-bar-container">
+<div class="moove-gdpr-info-bar-content">
+<div class="moove-gdpr-cookie-notice">
+<p>We are using cookies to give you the best experience on our website.</p>
+<p>&nbsp;</p>
+</div>
+<div class="moove-gdpr-button-holder">
+<button class="mgbutton moove-gdpr-infobar-allow-all gdpr-fbo-0" aria-label="Accept">Accept</button>
+</div>
+</div>
+</div>
+</aside>
+<script type="1843ac42367c0d85701936f0-text/javascript">
+		/* MonsterInsights Scroll Tracking */
+			if ( typeof(jQuery) !== 'undefined' ) {
+				jQuery( document ).ready(function(){
+					function monsterinsights_scroll_tracking_load() {
+						if ( ( typeof(__gaTracker) !== 'undefined' && __gaTracker && __gaTracker.hasOwnProperty( "loaded" ) && __gaTracker.loaded == true ) || ( typeof(__gtagTracker) !== 'undefined' && __gtagTracker ) ) {
+							(function(factory) {
+								factory(jQuery);
+							}(function($) {
+
+								/* Scroll Depth */
+								"use strict";
+								var defaults = {
+									percentage: true
+								};
+
+								var $window = $(window),
+									cache = [],
+									scrollEventBound = false,
+									lastPixelDepth = 0;
+
+								/*
+								 * Plugin
+								 */
+
+								$.scrollDepth = function(options) {
+
+									var startTime = +new Date();
+
+									options = $.extend({}, defaults, options);
+
+									/*
+									 * Functions
+									 */
+
+									function sendEvent(action, label, scrollDistance, timing) {
+										if ( 'undefined' === typeof MonsterInsightsObject || 'undefined' === typeof MonsterInsightsObject.sendEvent ) {
+											return;
+										}
+											var type        = 'event';
+	var eventName   = action;
+	var fieldsArray = {
+		event_category : 'Scroll Depth',
+		event_label    : label,
+		value          : 1,
+		non_interaction: true,
+		send_to: 'UA-4988227-2'
+	};
+
+	MonsterInsightsObject.sendEvent( type, eventName, fieldsArray );
+
+	if (arguments.length > 3) {
+		var type        = 'event';
+		var eventName   = 'timing_complete';
+		fieldsArray = {
+			event_category : 'Scroll Depth',
+			name           : action,
+			event_label    : label,
+			value          : timing,
+			non_interaction: 1,
+			send_to: 'UA-4988227-2'
+		};
+
+		MonsterInsightsObject.sendEvent( type, eventName, fieldsArray );
+	}
+										}
+
+									function calculateMarks(docHeight) {
+										return {
+											'25%' : parseInt(docHeight * 0.25, 10),
+											'50%' : parseInt(docHeight * 0.50, 10),
+											'75%' : parseInt(docHeight * 0.75, 10),
+											/* Cushion to trigger 100% event in iOS */
+											'100%': docHeight - 5
+										};
+									}
+
+									function checkMarks(marks, scrollDistance, timing) {
+										/* Check each active mark */
+										$.each(marks, function(key, val) {
+											if ( $.inArray(key, cache) === -1 && scrollDistance >= val ) {
+												sendEvent('Percentage', key, scrollDistance, timing);
+												cache.push(key);
+											}
+										});
+									}
+
+									function rounded(scrollDistance) {
+										/* Returns String */
+										return (Math.floor(scrollDistance/250) * 250).toString();
+									}
+
+									function init() {
+										bindScrollDepth();
+									}
+
+									/*
+									 * Public Methods
+									 */
+
+									/* Reset Scroll Depth with the originally initialized options */
+									$.scrollDepth.reset = function() {
+										cache = [];
+										lastPixelDepth = 0;
+										$window.off('scroll.scrollDepth');
+										bindScrollDepth();
+									};
+
+									/* Add DOM elements to be tracked */
+									$.scrollDepth.addElements = function(elems) {
+
+										if (typeof elems == "undefined" || !$.isArray(elems)) {
+											return;
+										}
+
+										$.merge(options.elements, elems);
+
+										/* If scroll event has been unbound from window, rebind */
+										if (!scrollEventBound) {
+											bindScrollDepth();
+										}
+
+									};
+
+									/* Remove DOM elements currently tracked */
+									$.scrollDepth.removeElements = function(elems) {
+
+										if (typeof elems == "undefined" || !$.isArray(elems)) {
+											return;
+										}
+
+										$.each(elems, function(index, elem) {
+
+											var inElementsArray = $.inArray(elem, options.elements);
+											var inCacheArray = $.inArray(elem, cache);
+
+											if (inElementsArray != -1) {
+												options.elements.splice(inElementsArray, 1);
+											}
+
+											if (inCacheArray != -1) {
+												cache.splice(inCacheArray, 1);
+											}
+
+										});
+
+									};
+
+									/*
+									 * Throttle function borrowed from:
+									 * Underscore.js 1.5.2
+									 * http://underscorejs.org
+									 * (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+									 * Underscore may be freely distributed under the MIT license.
+									 */
+
+									function throttle(func, wait) {
+										var context, args, result;
+										var timeout = null;
+										var previous = 0;
+										var later = function() {
+											previous = new Date;
+											timeout = null;
+											result = func.apply(context, args);
+										};
+										return function() {
+											var now = new Date;
+											if (!previous) previous = now;
+											var remaining = wait - (now - previous);
+											context = this;
+											args = arguments;
+											if (remaining <= 0) {
+												clearTimeout(timeout);
+												timeout = null;
+												previous = now;
+												result = func.apply(context, args);
+											} else if (!timeout) {
+												timeout = setTimeout(later, remaining);
+											}
+											return result;
+										};
+									}
+
+									/*
+									 * Scroll Event
+									 */
+
+									function bindScrollDepth() {
+
+										scrollEventBound = true;
+
+										$window.on('scroll.scrollDepth', throttle(function() {
+											/*
+											 * We calculate document and window height on each scroll event to
+											 * account for dynamic DOM changes.
+											 */
+
+											var docHeight = $(document).height(),
+												winHeight = window.innerHeight ? window.innerHeight : $window.height(),
+												scrollDistance = $window.scrollTop() + winHeight,
+
+												/* Recalculate percentage marks */
+												marks = calculateMarks(docHeight),
+
+												/* Timing */
+												timing = +new Date - startTime;
+
+											checkMarks(marks, scrollDistance, timing);
+										}, 500));
+
+									}
+
+									init();
+								};
+
+								/* UMD export */
+								return $.scrollDepth;
+
+							}));
+
+							jQuery.scrollDepth();
+						} else {
+							setTimeout(monsterinsights_scroll_tracking_load, 200);
+						}
+					}
+					monsterinsights_scroll_tracking_load();
+				});
+			}
+		/* End MonsterInsights Scroll Tracking */
+		
+</script>
+<div id="moove_gdpr_cookie_modal" class="gdpr_lightbox-hide" role="complementary" aria-label="GDPR Settings Screen">
+<div class="moove-gdpr-modal-content moove-clearfix logo-position-left moove_gdpr_modal_theme_v1">
+<button class="moove-gdpr-modal-close" aria-label="Close GDPR Cookie Settings">
+<span class="gdpr-sr-only">Close GDPR Cookie Settings</span>
+<span class="gdpr-icon moovegdpr-arrow-close"></span>
+</button>
+<div class="moove-gdpr-modal-left-content">
+<div class="moove-gdpr-company-logo-holder">
+<img src="https://nonprofitquarterly.org/wp-content/plugins/gdpr-cookie-compliance/dist/images/gdpr-logo.png" alt="Non Profit News | Nonprofit Quarterly" width="350" height="233" class="img-responsive" />
+</div>
+<ul id="moove-gdpr-menu">
+<li class="menu-item-on menu-item-privacy_overview menu-item-selected">
+<button data-href="#privacy_overview" class="moove-gdpr-tab-nav" aria-label="Privacy Overview">
+<span class="gdpr-svg-icon">
+<svg class="icon icon-privacy-overview" viewBox="0 0 26 32">
+<path d="M11.082 27.443l1.536 0.666 1.715-0.717c5.018-2.099 8.294-7.014 8.294-12.442v-5.734l-9.958-5.325-9.702 5.325v5.862c0 5.376 3.2 10.24 8.115 12.365zM4.502 10.138l8.166-4.506 8.397 4.506v4.813c0 4.838-2.893 9.19-7.347 11.034l-1.101 0.461-0.922-0.41c-4.352-1.894-7.194-6.195-7.194-10.957v-4.941zM12.029 14.259h1.536v7.347h-1.536v-7.347zM12.029 10.394h1.536v2.483h-1.536v-2.483z" fill="currentColor"></path>
+</svg>
+</span>
+<span class="gdpr-nav-tab-title">Privacy Overview</span>
+</button>
+</li>
+<li class="menu-item-strict-necessary-cookies menu-item-off">
+<button data-href="#strict-necessary-cookies" class="moove-gdpr-tab-nav" aria-label="Strictly Necessary Cookies">
+<span class="gdpr-svg-icon">
+<svg class="icon icon-strict-necessary" viewBox="0 0 26 32">
+<path d="M22.685 5.478l-9.984 10.752-2.97-4.070c-0.333-0.461-0.973-0.538-1.434-0.205-0.435 0.333-0.538 0.947-0.23 1.408l3.686 5.094c0.179 0.256 0.461 0.41 0.768 0.435h0.051c0.282 0 0.538-0.102 0.742-0.307l10.854-11.699c0.358-0.435 0.333-1.075-0.102-1.434-0.384-0.384-0.998-0.358-1.382 0.026v0zM22.301 12.954c-0.563 0.102-0.922 0.64-0.794 1.203 0.128 0.614 0.179 1.229 0.179 1.843 0 5.094-4.122 9.216-9.216 9.216s-9.216-4.122-9.216-9.216 4.122-9.216 9.216-9.216c1.536 0 3.021 0.384 4.378 1.101 0.512 0.23 1.126 0 1.357-0.538 0.205-0.461 0.051-0.998-0.384-1.254-5.478-2.944-12.314-0.922-15.283 4.557s-0.922 12.314 4.557 15.258 12.314 0.922 15.258-4.557c0.896-1.638 1.357-3.482 1.357-5.35 0-0.768-0.077-1.51-0.23-2.253-0.102-0.538-0.64-0.896-1.178-0.794z" fill="currentColor"></path>
+</svg>
+</span>
+<span class="gdpr-nav-tab-title">Strictly Necessary Cookies</span>
+</button>
+</li>
+</ul>
+<div class="moove-gdpr-branding-cnt">
+<a href="https://wordpress.org/plugins/gdpr-cookie-compliance/" target="_blank" rel="noopener noreferrer nofollow external" class="moove-gdpr-branding" data-wpel-link="external">Powered by&nbsp; <span>GDPR Cookie Compliance</span></a>
+</div>
+</div>
+<div class="moove-gdpr-modal-right-content">
+<div class="moove-gdpr-modal-title">
+</div>
+<div class="main-modal-content">
+<div class="moove-gdpr-tab-content">
+<div id="privacy_overview" class="moove-gdpr-tab-main">
+<span class="tab-title">Privacy Overview</span>
+<div class="moove-gdpr-tab-main-content">
+<p>This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.</p>
+</div>
+</div>
+<div id="strict-necessary-cookies" class="moove-gdpr-tab-main" style="display:none">
+<span class="tab-title">Strictly Necessary Cookies</span>
+<div class="moove-gdpr-tab-main-content">
+<p>Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.</p>
+<div class="moove-gdpr-status-bar">
+<div class="gdpr-cc-form-wrap">
+<div class="gdpr-cc-form-fieldset">
+<label class="cookie-switch" for="moove_gdpr_strict_cookies">
+ <span class="gdpr-sr-only">Enable or Disable Cookies</span>
+<input type="checkbox" aria-label="Strictly Necessary Cookies" value="check" name="moove_gdpr_strict_cookies" id="moove_gdpr_strict_cookies">
+<span class="cookie-slider cookie-round" data-text-enable="Enabled" data-text-disabled="Disabled"></span>
+</label>
+</div>
+</div>
+</div>
+<div class="moove-gdpr-strict-warning-message" style="margin-top: 10px;">
+<p>If you disable this cookie, we will not be able to save your preferences. This means that every time you visit this website you will need to enable or disable cookies again.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="moove-gdpr-modal-footer-content">
+<div class="moove-gdpr-button-holder">
+<button class="mgbutton moove-gdpr-modal-allow-all button-visible" aria-label="Enable All">Enable All</button>
+<button class="mgbutton moove-gdpr-modal-save-settings button-visible" aria-label="Save Settings">Save Settings</button>
+</div>
+</div>
+</div>
+<div class="moove-clearfix"></div>
+</div>
+</div>
+<script type="1843ac42367c0d85701936f0-text/javascript"> var swp_nonce = "7cd4485ade";var swpFloatBeforeContent = false; var swp_ajax_url = "https://nonprofitquarterly.org/wp-admin/admin-ajax.php"; var swp_post_id = "3546433";var swpClickTracking = false; swpPinIt={"enabled":false};</script>
+<script type="1843ac42367c0d85701936f0-text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/407546.js"></script>
+<script type="1843ac42367c0d85701936f0-text/javascript" src="https://commerce-static.heyoya.com/b2b/b2b_settings.hey?affId=sjhBXaBwZw"></script>
+<script type="1843ac42367c0d85701936f0-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bb9b7847a8","applicationID":"290946388","transactionName":"MQZbZEUHCBIHAEQNCQhMeFNDDwkPSRBZCgEKBg==","queueTime":0,"applicationTime":1658,"atts":"HUFYEg0dGxw=","errorBeacon":"bam.nr-data.net","agent":""}</script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="1843ac42367c0d85701936f0-|49" defer=""></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"70c5c1f4ed8303fc","version":"2021.12.0","r":1,"token":"66a3f7636ffe497ebdfd90cce0f49b9b","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
+<script type="1843ac42367c0d85701936f0-text/javascript">
+// Discuss toggler
+jQuery(function ($) {
+    $(window).load(function () {
+        if ($('#comment-toggler').length) {
+            $('#comment-toggler').click(function () {
+                $('#disqus_thread').toggleClass('open');
+            });
+        }
+    });
+});
+</script>

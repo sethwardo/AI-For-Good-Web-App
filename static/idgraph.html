@@ -1,0 +1,76 @@
+<!-- This is the graph file which makes AJAX call -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vis Network | Data | Scaling Labels</title>
+
+    <style type="text/css">
+      html,
+      body {
+        font: 10pt arial;
+      }
+      #mynetwork {
+        width: 600px;
+        height: 600px;
+        border: 1px solid lightgray;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="vis-network.min.js"
+    ></script>
+    <script type="text/javascript">
+      var nodes = null;
+      var edges = null;
+      var network = null;
+      function func(){
+        var xml = new XMLHttpRequest();
+        xml.open("POST", "/graph2", true);
+        xml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        
+        xml.onload = function () {
+            const temp = JSON.parse(this.responseText);
+            nodes = temp.data.nodes;
+            edges = temp.data.edges;
+            console.log(nodes, edges);
+      }
+      xml.send();
+      }
+
+      function draw() {
+
+        // Instantiate our network object.
+        var container = document.getElementById("mynetwork");
+        var data = {
+          nodes: nodes,
+          edges: edges,
+        };
+        console.log(data.nodes, data.edges);
+        var options = {
+          nodes: {
+            shape: "circle",
+            scaling: {
+              label: {
+                min: 8,
+                max: 20,
+              },
+            },
+          },
+        };
+        network = new vis.Network(container, data, options);
+
+      }
+
+    </script>
+  </head>
+  <body onload="draw()">
+    <p>
+      Scale nodes and edges depending on their value. Hover over edges to get a
+      popup with more information.
+    </p>
+    <div id="mynetwork"></div>
+  </body>
+</html>

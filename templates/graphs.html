@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AI for Good</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style type="text/css">
+      html,
+      body {
+        font: 10pt arial;
+      }
+      #mynetwork {
+        width: 1000px;
+        height: 800px;
+        border: 1px solid lightgray;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="vis-network.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      var nodes = null;
+      var edges = null;
+      var network = null;
+
+      function draw() {
+        const temp = {{graph | safe}};
+        // for(var key in temp){
+        //   if(temp.hasOwnProperty(key)){
+        //    nodes = temp[key].nodes;
+        //    edges = temp[key].edges;
+        //   }
+        // }
+        nodes = temp.nodes;
+        // nodes.forEach(element => element["title"] = element["label"]); // (makes title = label same)TODO Ana add the title field
+        edges = temp.edges;
+        // for loop to add title to nodes.
+        nodes.forEach(element => console.log(element)); // TODO Ana add the date, author in the lablel
+        // Instantiate our network object.
+        var container = document.getElementById("mynetwork");
+        var data = {
+          nodes: nodes,
+          edges: edges,
+        };
+        console.log(data.nodes, data.edges);
+        var options = {
+          autoResize: true,
+          interaction: { hover: true },
+          manipulation: {
+            enabled: false,
+          },
+          nodes: {
+              font: { multi: true },
+              widthConstraint: {
+                maximum: 150,
+              },
+              labelHighlightBold: true,
+              shape: "circle",
+              scaling: {
+                label: {
+                  min: 8,
+                  max: 20,
+                },
+              },
+          },
+          edges: {
+          }
+        };
+        network = new vis.Network(container, data, options);
+        // displaying the list of articles as title, date
+        var ul = document.createElement("ul");
+        for(i = 0; i < nodes.length; i++)
+        {
+            var li = document.createElement("li");
+            li.innerHTML = "Title: " + nodes[i].title + ", Publish Date: " + nodes[i].label;
+            ul.appendChild(li);
+        }
+        document.getElementById("articlelist").appendChild(ul);
+      }
+    </script>
+    <h1>Graph</h1>
+    
+  </head>
+  
+  <body onload="draw()">
+    <div class="backBtn">
+      <span class="line tLine"></span>
+      <span class="line mLine"></span>
+      <span class="label" onclick="history.back()">Back</span>
+      <span class="line bLine"></span>
+    </div>
+    <div id="mynetwork"></div>
+    <div id="articlelist">
+      <!-- <li class="sgLi"><ul class="s2"></ul></li> -->
+    </div>
+  </body>
+</html>

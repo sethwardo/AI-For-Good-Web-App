@@ -1,0 +1,55 @@
+<!-- Search Bar -->
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <h1>Articles</h1>
+
+    <script>
+        // JavaScript code
+        function search_keywords() {
+            let input = document.getElementById('searchbar').value
+            input=input.toLowerCase();
+            let x = document.getElementsByClassName('function');
+              
+            for (i = 0; i < x.length; i++) { 
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display="none";
+                }
+                else {
+                    x[i].style.display="list-item";                 
+                }
+            }
+        }
+    </script> 
+    
+    </head>
+       <div class = "search">
+        <form class="example" method="post" action="">
+            <input id="searchbar" onkeyup="search_keywords()" type="text" placeholder="Search by keywords, or all to see all the data" name="keyword">
+            <button type="submit"><i class="fa fa-search"> search </i>
+            </button>
+        </form>
+       </div>
+       <br>
+    <main>
+        <div class="results">
+            {% for item in data %}
+                <ul class="gradient-list">
+                <li>
+                    <a href = "/graph?id={{item[0]}}">
+                        Title: {{item[1]}}
+                    </a>
+                    Date: {{item[4]}}
+                </li>
+                </ul>
+            {% endfor %}
+        
+        </div>
+    </main>
+        <address>
+            AI for Good Project
+        </address>
+    </body>
+</html>

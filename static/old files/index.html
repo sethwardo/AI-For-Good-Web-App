@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+
+   <style>
+    #searchbar{
+       margin-left: 15%;
+       padding:15px;
+       border-radius: 10px;
+      }
+
+      input[type=text] {
+        width: 30%;
+        -webkit-transition: width 0.15s ease-in-out;
+        transition: width 0.15s ease-in-out;
+      }
+
+      /* When the input field gets focus,
+        change its width to 100% */
+      input[type=text]:focus {
+         width: 70%;
+      }
+
+      #list{
+         font-size:  1.5em;
+         margin-left: 90px;
+      }
+
+   .function{
+      display: list-item;    
+      } 
+   </style>
+    <script>
+        // JavaScript code
+        function search_keywords() {
+            let input = document.getElementById('searchbar').value
+            input=input.toLowerCase();
+            let x = document.getElementsByClassName('function');
+              
+            for (i = 0; i < x.length; i++) { 
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display="none";
+                }
+                else {
+                    x[i].style.display="list-item";                 
+                }
+            }
+        }
+    </script>
+</head>
+  
+<body>
+      
+    <!-- input tag -->
+    <input id="searchbar" onkeyup="search_keywords()" type="text"
+        name="search" placeholder="Search articles..">
+      
+    <!-- ordered list -->
+    <ol id='list'>
+        <li class="function">
+            <a href = "https://nonprofitquarterly.org/"> Non Profit Quarterly Articles</a>
+         </li>
+         <li class="function">
+            <a href = "./graph"> Recommended Webinars for You</a>
+         </li>
+        <li class="function">
+            <a href ="/search" >Database </a>
+        </li>
+        <li class="function">Technology and Algorithms</li>
+        <li class="function">Machine Learnings</li>
+        <li class="function">Latest Fundraising News</li>
+        <li class="function">Fundraisers Donation</li>
+        <li class="function">Non Profit Leader</li>
+    </ol>
+      
+</body>
+  
+</html>
